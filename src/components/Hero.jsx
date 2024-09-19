@@ -19,9 +19,13 @@ const Hero = () => {
       <p className="mt-4 text-lg text-gray-300">
         Spécialiste dans la création des sites modernes et responsives
       </p>
-      <div>
-        <button>Me contacter</button>
-        <button>Resume</button>
+      <div className="mt-8 space-x-4">
+        <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 rounded-full">
+          Me contacter
+        </button>
+        <button className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 rounded-full">
+          Resume
+        </button>
       </div>
     </div>
   );
