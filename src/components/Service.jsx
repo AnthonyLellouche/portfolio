@@ -8,18 +8,18 @@ const services = [
   {
     id: 2,
     title: "UI & UX",
-    description: "Une expérience fluide et magnifique pour vos clients",
+    description: "Une expérience fluide et magnifique pour vos clients.",
   },
   {
     id: 3,
     title: "Spécialiste Imagerie Médicale",
-    description: "Création des applications web sur le médical",
+    description: "Création des applications web sur le médical.",
   },
   {
     id: 4,
     title: "Accessibilité",
     description:
-      "Revu de la sémantique ARIA, et de quelques normes sur l'accessibilité",
+      "Révision de la sémantique ARIA et des normes d’accessibilité associées.",
   },
 ];
 

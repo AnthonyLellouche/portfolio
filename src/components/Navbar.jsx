@@ -1,24 +1,27 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="bg-black text-white px-8 md:px-16 lg:px-24">
       <div className="container mx-auto py-2 flex  md:justify-between items-center">
         <div className="text-2xl font-bold hidden md:inline">Anthony</div>
         <div className="space-x-6">
-          <a href="#home" className="hover:text-gray-400">
+          {/* Utilisation de Link pour rediriger vers la page d'accueil avec les ancres */}
+          <Link to="/#home" className="hover:text-gray-400">
             Home
-          </a>
-          <a href="#about" className="hover:text-gray-400">
+          </Link>
+          <Link to="/#about" className="hover:text-gray-400">
             About Me
-          </a>
-          <a href="#service" className="hover:text-gray-400">
+          </Link>
+          <Link to="/#service" className="hover:text-gray-400">
             Services
-          </a>
-          <a href="#project" className="hover:text-gray-400">
+          </Link>
+          <Link to="/#project" className="hover:text-gray-400">
             Project
-          </a>
-          <a href="#contact" className="hover:text-gray-400">
+          </Link>
+          <Link to="/#contact" className="hover:text-gray-400">
             Contact
-          </a>
+          </Link>
         </div>
         <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 rounded-full">
           Connexion
