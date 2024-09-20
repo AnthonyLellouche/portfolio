@@ -14,7 +14,7 @@ const Hero = () => {
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
           Anthony Lellouche
         </span>
-        , Intégrateur Web chez NEHS Digital/Enovacom
+        , intégrateur Web chez NEHS Digital/Enovacom
       </h1>
       <p className="mt-4 text-lg text-gray-300">
         Spécialiste dans la création des sites modernes et responsives
