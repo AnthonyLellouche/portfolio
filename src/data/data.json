@@ -1,0 +1,74 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "ArgentBank",
+      "technologies": "React & Redux & NodeJS",
+      "image": "argentbank.png",
+      "github": "https://github.com/AnthonyLellouche/argentBankRedux",
+      "description": "Création d'une application bancaire avec React."
+    },
+    {
+      "id": 2,
+      "name": "724 Events",
+      "technologies": "React",
+      "image": "724events.png",
+      "github": "https://github.com/AnthonyLellouche/724events",
+      "description": "Site internet d'une agence événementiel, deboggage du site."
+    },
+    {
+      "id": 3,
+      "name": "Nina-Carducci",
+      "technologies": "SEO, accessibilité, Lighthouse",
+      "image": "ninacarducci.webp",
+      "github": "https://github.com/AnthonyLellouche/nina-carducci",
+      "description": "Optimisation du référencement du site de Nina Carducci."
+    },
+    {
+      "id": 4,
+      "name": "Kasa",
+      "technologies": "React, CRA et SCSS",
+      "image": "kasa.png",
+      "github": "https://github.com/AnthonyLellouche/kasa",
+      "description": "Création d'une application web de location immobilière."
+    },
+    {
+      "id": 5,
+      "name": "OhmyfoodParis",
+      "technologies": "HTML & SCSS",
+      "image": "ohmyfood.png",
+      "github": "https://github.com/AnthonyLellouche/ohmyfoodparis",
+      "description": "Développer un site mobile-first qui répertorie les menus de restaurants."
+    },
+    {
+      "id": 6,
+      "name": "Booki",
+      "technologies": "HTML & CSS",
+      "image": "booki.jpg",
+      "github": "https://github.com/AnthonyLellouche/booki",
+      "description": "Création d'un site d'une agence de voyage."
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "title": "Applications",
+      "description": "Développe des sites vitrines, e-commerce, applications web, responsive"
+    },
+    {
+      "id": 2,
+      "title": "UI & UX",
+      "description": "Une expérience fluide et magnifique pour vos clients."
+    },
+    {
+      "id": 3,
+      "title": "Spécialiste Imagerie Médicale",
+      "description": "Création des applications web sur le médical."
+    },
+    {
+      "id": 4,
+      "title": "Accessibilité",
+      "description": "Révision de la sémantique ARIA et des normes d’accessibilité associées."
+    }
+  ]
+}

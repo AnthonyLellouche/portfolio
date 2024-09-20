@@ -1,29 +1,8 @@
-const services = [
-  {
-    id: 1,
-    title: "Applications",
-    description:
-      "Développe des sites vitrines, e-commerce, applications web, responsive",
-  },
-  {
-    id: 2,
-    title: "UI & UX",
-    description: "Une expérience fluide et magnifique pour vos clients.",
-  },
-  {
-    id: 3,
-    title: "Spécialiste Imagerie Médicale",
-    description: "Création des applications web sur le médical.",
-  },
-  {
-    id: 4,
-    title: "Accessibilité",
-    description:
-      "Révision de la sémantique ARIA et des normes d’accessibilité associées.",
-  },
-];
+import data from "../data/data.json";
 
 const Service = () => {
+  const { services } = data;
+
   return (
     <div className="bg-black text-white py-20" id="service">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">

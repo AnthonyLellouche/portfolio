@@ -6,7 +6,6 @@ const Navbar = () => {
       <div className="container mx-auto py-2 flex  md:justify-between items-center">
         <div className="text-2xl font-bold hidden md:inline">Anthony</div>
         <div className="space-x-6">
-          {/* Utilisation de Link pour rediriger vers la page d'accueil avec les ancres */}
           <Link to="/#home" className="hover:text-gray-400">
             Home
           </Link>
