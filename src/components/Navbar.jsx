@@ -10,13 +10,13 @@ const Navbar = () => {
             Home
           </Link>
           <Link to="/#about" className="hover:text-gray-400">
-            About Me
+            À propos de moi
           </Link>
           <Link to="/#service" className="hover:text-gray-400">
-            Services
+            Mes services
           </Link>
           <Link to="/#project" className="hover:text-gray-400">
-            Project
+            Mes projets
           </Link>
           <Link to="/#contact" className="hover:text-gray-400">
             Contact
