@@ -1,4 +1,3 @@
-import "./App.css";
 import {
   BrowserRouter as Router,
   Routes,
@@ -6,6 +5,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useEffect } from "react";
+
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -13,7 +13,9 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Service from "./components/Service";
+
 import Privacy from "./pages/Privacy";
+import Login from "./pages/Login";
 
 const ScrollToHashElement = () => {
   const location = useLocation();
@@ -50,6 +52,7 @@ const App = () => {
           }
         />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
