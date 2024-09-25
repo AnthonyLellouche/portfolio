@@ -33,8 +33,9 @@ const ScrollToHashElement = () => {
 };
 
 const App = () => {
+  const basename = import.meta.env.MODE === "production" ? "/portfolio" : "";
   return (
-    <Router>
+    <Router basename={basename}>
       <ScrollToHashElement />
       <Routes>
         <Route

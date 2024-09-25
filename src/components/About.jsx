@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import Aboutme from "../assets/aboutme.webp";
+import Aboutme from "../../public/assets/aboutme.webp";
 
 const About = () => {
   return (

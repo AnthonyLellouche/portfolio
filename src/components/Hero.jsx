@@ -1,5 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
-import HeroImage from "../assets/profil.webp";
+import HeroImage from "../../public/assets/profil.webp";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
