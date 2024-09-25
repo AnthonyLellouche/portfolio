@@ -87,8 +87,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      {/* Modal de succès */}
       {isSubmitted && (
         <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-20">
           <div className="bg-black p-6 rounded-lg text-center">
