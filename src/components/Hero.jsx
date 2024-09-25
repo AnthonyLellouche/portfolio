@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import HeroImage from "../assets/profil.png";
+import HeroImage from "../assets/profil.webp";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -11,7 +11,7 @@ const Hero = () => {
         className="mx-auto mb-8 w-48 h-48 rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
       />
       <h1 className="text-4xl font-bold">
-        {" "}
+        Je suis{"  "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
           Anthony Lellouche
         </span>

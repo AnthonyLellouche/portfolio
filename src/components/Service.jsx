@@ -21,7 +21,7 @@ const Service = () => {
               </h3>
               <p className="mt-2 text-gray-300">{service.description}</p>
               <a
-                href="#"
+                href="/#contact"
                 className="mt-4 inline-block text-green-400 hover:text-blue-500"
               >
                 En savoir plus

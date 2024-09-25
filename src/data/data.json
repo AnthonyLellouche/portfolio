@@ -4,7 +4,7 @@
       "id": 1,
       "name": "ArgentBank",
       "technologies": "React & Redux & NodeJS",
-      "image": "argentbank.png",
+      "image": "argentbank.webp",
       "github": "https://github.com/AnthonyLellouche/argentBankRedux",
       "description": "Création d'une application bancaire avec React."
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "name": "724 Events",
       "technologies": "React",
-      "image": "724events.png",
+      "image": "724events.webp",
       "github": "https://github.com/AnthonyLellouche/724events",
       "description": "Site internet d'une agence événementiel, deboggage du site."
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "name": "Kasa",
       "technologies": "React, CRA et SCSS",
-      "image": "kasa.png",
+      "image": "kasa.webp",
       "github": "https://github.com/AnthonyLellouche/kasa",
       "description": "Création d'une application web de location immobilière."
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "name": "OhmyfoodParis",
       "technologies": "HTML & SCSS",
-      "image": "ohmyfood.png",
+      "image": "ohmyfood.webp",
       "github": "https://github.com/AnthonyLellouche/ohmyfoodparis",
       "description": "Développer un site mobile-first qui répertorie les menus de restaurants."
     },
@@ -44,9 +44,17 @@
       "id": 6,
       "name": "Booki",
       "technologies": "HTML & CSS",
-      "image": "booki.jpg",
+      "image": "booki.webp",
       "github": "https://github.com/AnthonyLellouche/booki",
       "description": "Création d'un site d'une agence de voyage."
+    },
+    {
+      "id": 7,
+      "name": "Sophie Bluel",
+      "technologies": "HTML & CSS & JS",
+      "image": "sophiebluel.webp",
+      "github": "https://github.com/AnthonyLellouche/sophiebluel",
+      "description": "Création d'une page web dynamique pour le site internet d'une architecte d'intérieur."
     }
   ],
   "services": [
@@ -69,6 +77,26 @@
       "id": 4,
       "title": "Accessibilité",
       "description": "Révision de la sémantique ARIA et des normes d’accessibilité associées."
+    },
+    {
+      "id": 5,
+      "title": "Développement Frontend & Backend",
+      "description": "Expertise dans le développement frontend et backend pour des solutions complètes."
+    },
+    {
+      "id": 6,
+      "title": "Responsive",
+      "description": "Développement d'applications mobiles natives."
+    },
+    {
+      "id": 7,
+      "title": "Optimisation SEO",
+      "description": "Optimisation de votre site pour améliorer sa visibilité sur les moteurs de recherche et attirer plus de visiteurs."
+    },
+    {
+      "id": 8,
+      "title": "Maintenance et support",
+      "description": "Assure la maintenance et la mise à jour continue de vos applications web pour garantir leur bon fonctionnement."
     }
   ]
 }
