@@ -25,7 +25,10 @@ const Contact = () => {
             </h3>
             <p>Vous voulez en savoir plus sur moi? Contactez moi!</p>
             <div className="mb-4 mt-8">
-              <FaEnvelope className="inline-block text-green-400 mr-2" />
+              <FaEnvelope
+                className="inline-block text-green-400 mr-2"
+                aria-hidden="true"
+              />
               <a
                 href="mailto:an.lellouche@gmail.com"
                 className="hover:underline"
@@ -34,11 +37,17 @@ const Contact = () => {
               </a>
             </div>
             <div className="mb-4">
-              <FaPhone className="inline-block text-green-400 mr-2" />
+              <FaPhone
+                className="inline-block text-green-400 mr-2"
+                aria-hidden="true"
+              />
               <span>06.25.78.27.84</span>
             </div>
             <div className="mb-4">
-              <FaMapMarkedAlt className="inline-block text-green-400 mr-2" />
+              <FaMapMarkedAlt
+                className="inline-block text-green-400 mr-2"
+                aria-hidden="true"
+              />
               <span>1501, Routes des Dolines, 06600 Valbonne.</span>
             </div>
           </div>
@@ -88,7 +97,11 @@ const Contact = () => {
         </div>
       </div>
       {isSubmitted && (
-        <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-20">
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-20"
+          role="dialog"
+          aria-labelledby="modalTitle"
+        >
           <div className="bg-black p-6 rounded-lg text-center">
             <h3 className="text-2xl font-bold mb-4">Message envoyé</h3>
             <p>

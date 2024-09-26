@@ -62,6 +62,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
+              aria-label="Lien vers mon profil Facebook"
             >
               <FaFacebook />
             </a>
@@ -70,6 +71,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
+              aria-label="Lien vers mon profil Twitter/X"
             >
               <FaXTwitter />
             </a>
@@ -78,6 +80,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
+              aria-label="Lien vers mon profil linkedin"
             >
               <FaLinkedin />
             </a>
@@ -86,6 +89,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
+              aria-label="Lien vers mon profil GitHub"
             >
               <FaGithub />
             </a>
@@ -98,13 +102,18 @@ const Footer = () => {
         </div>
       </div>
       {isSubscribed && (
-        <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-20">
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-20"
+          role="dialog"
+          aria-labelledby="modalTitle"
+        >
           <div className="bg-black p-6 rounded-lg text-center">
             <h3 className="text-2xl font-bold mb-4">Abonnement réussi</h3>
             <p>Merci de vous être abonné à notre newsletter.</p>
             <button
               className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 mt-5 rounded-full"
               onClick={closeModal}
+              aria-label="Fermer la modale"
             >
               Fermer
             </button>

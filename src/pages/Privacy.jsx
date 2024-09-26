@@ -16,6 +16,7 @@ const Privacy = () => {
             <a
               href="https://anthonyportfolio.com"
               className="text-blue-500 hover:underline"
+              aria-label="Accéder à anthonyportfolio.com"
             >
               anthonyportfolio.com
             </a>
@@ -93,6 +94,7 @@ const Privacy = () => {
             <a
               href="mailto:contact@anthonyportfolio.com"
               className="text-blue-500 hover:underline"
+              aria-label="Envoyer un email à Anthony Portfolio"
             >
               contact@anthonyportfolio.com
             </a>
@@ -123,6 +125,7 @@ const Privacy = () => {
             <a
               href="mailto:contact@anthonyportfolio.com"
               className="text-blue-500 hover:underline"
+              aria-label="Envoyer un email à Anthony Portfolio"
             >
               contact@anthonyportfolio.com
             </a>
