@@ -103,7 +103,7 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-4">Abonnement réussi</h3>
             <p>Merci de vous être abonné à notre newsletter.</p>
             <button
-              className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 mt-5 rounded-full"
+              className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 mt-5 rounded-full"
               onClick={closeModal}
             >
               Fermer

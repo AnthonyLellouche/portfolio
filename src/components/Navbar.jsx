@@ -65,6 +65,12 @@ const Navbar = () => {
           <Link to="/#contact" className="hover:text-gray-400">
             Contact
           </Link>
+          <Link
+            to="/login"
+            className="bg-gradient-to-r from-green-400 to-blue-500 text-white md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 rounded-full"
+          >
+            Connexion
+          </Link>
         </div>
       )}
     </nav>
