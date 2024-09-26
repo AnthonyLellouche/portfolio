@@ -1,6 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import Aboutme from "../../public/assets/aboutme.webp";
-
 const About = () => {
   return (
     <div className="bg-black text-white py-20" id="about">
@@ -10,7 +8,7 @@ const About = () => {
         </h2>
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <img
-            src={Aboutme}
+            src="/assets/aboutme.webp"
             alt=""
             className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
           />
