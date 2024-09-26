@@ -1,4 +1,5 @@
 import data from "../data/data.json";
+import { Link } from "react-router-dom";
 
 const Service = () => {
   const { services } = data;
@@ -20,12 +21,12 @@ const Service = () => {
                 {service.title}
               </h3>
               <p className="mt-2 text-gray-300">{service.description}</p>
-              <a
-                href="/#contact"
+              <Link
+                to="/#contact"
                 className="mt-4 inline-block text-green-400 hover:text-blue-500"
               >
-                En savoir plus
-              </a>
+                <a>Me contacter.</a>
+              </Link>
             </div>
           ))}
         </div>
