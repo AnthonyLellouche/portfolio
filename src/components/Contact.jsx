@@ -51,7 +51,7 @@ const Contact = () => {
               <span>1501, Routes des Dolines, 06600 Valbonne.</span>
             </div>
           </div>
-          <div className="flex-1 w-full">
+          <div className="flex-1 w-full pt-14">
             <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
               <div className="relative z-0 w-full mb-5 group">
                 <input
