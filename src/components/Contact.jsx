@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import { FaEnvelope, FaPhone, FaMapMarkedAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -168,12 +169,11 @@ const Contact = () => {
                     className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                   >
                     J'accepte la{" "}
-                    <a
-                      href="/privacy"
-                      className="text-blue-600 hover:underline dark:text-blue-500"
-                    >
-                      politique de confidentialité.
-                    </a>
+                    <Link to="/privacy">
+                      <span className="text-blue-600 hover:underline dark:text-blue-500">
+                        politique de confidentialité.
+                      </span>
+                    </Link>
                   </label>
                 </div>
               </fieldset>

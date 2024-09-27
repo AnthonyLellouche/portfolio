@@ -3,6 +3,8 @@ import { useState } from "react";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
 
@@ -94,11 +96,13 @@ const Footer = () => {
               <FaGithub />
             </a>
           </div>
-          <div className="flex space-x-4">
-            <a href="/privacy" className="text-gray-400 hover:text-white">
-              Politique de confidentialité
-            </a>
-          </div>
+          <Link to="/privacy">
+            <div className="flex space-x-4">
+              <p className="text-gray-400 hover:text-white">
+                Politique de confidentialité
+              </p>
+            </div>
+          </Link>
         </div>
       </div>
       {isSubscribed && (
