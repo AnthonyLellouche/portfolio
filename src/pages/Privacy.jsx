@@ -14,11 +14,11 @@ const Privacy = () => {
           <p className="mb-4">
             Chez Anthony Portfolio, accessible depuis{" "}
             <a
-              href="https://anthonyportfolio.com"
+              href="https://anthonylellouche.github.io/portfolio/"
               className="text-blue-500 hover:underline"
               aria-label="Accéder à anthonyportfolio.com"
             >
-              anthonyportfolio.com
+              anthonylellouche.github.io/portfolio/
             </a>
             , la confidentialité de nos visiteurs est une priorité absolue. Ce
             document de politique de confidentialité décrit les types
@@ -31,16 +31,18 @@ const Privacy = () => {
           </h2>
           <p className="mb-4">
             Les informations que vous nous fournissez directement incluent :
-            <ul className="list-disc list-inside mb-4">
-              <li>
-                Nom et adresse e-mail lorsque vous nous contactez directement
-                via des formulaires de contact ou par e-mail.
-              </li>
-              <li>
-                Les commentaires ou toute autre information que vous nous
-                envoyez volontairement.
-              </li>
-            </ul>
+          </p>
+          <ul className="list-disc list-inside mb-4">
+            <li>
+              Nom et adresse e-mail lorsque vous nous contactez directement via
+              des formulaires de contact ou par e-mail.
+            </li>
+            <li>
+              Les commentaires ou toute autre information que vous nous envoyez
+              volontairement.
+            </li>
+          </ul>
+          <p className="mb-4">
             Nous ne collectons pas de données sensibles comme votre adresse
             physique, vos coordonnées bancaires, ou autres données personnelles
             sans votre consentement préalable.
@@ -52,18 +54,18 @@ const Privacy = () => {
           <p className="mb-4">
             Les informations que nous collectons sont utilisées principalement
             pour :
-            <ul className="list-disc list-inside mb-4">
-              <li>Répondre à vos questions ou demandes de renseignements.</li>
-              <li>
-                Améliorer les services proposés sur le portfolio, comme l'ajout
-                de nouvelles sections ou projets.
-              </li>
-              <li>
-                Envoyer des mises à jour ou des notifications si vous avez opté
-                pour une telle communication.
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc list-inside mb-4">
+            <li>Répondre à vos questions ou demandes de renseignements.</li>
+            <li>
+              Améliorer les services proposés sur le portfolio, comme l'ajout de
+              nouvelles sections ou projets.
+            </li>
+            <li>
+              Envoyer des mises à jour ou des notifications si vous avez opté
+              pour une telle communication.
+            </li>
+          </ul>
 
           <h2 className="text-2xl font-bold mt-6 mb-4">
             3. Partage des Informations
@@ -92,11 +94,11 @@ const Privacy = () => {
             des questions ou souhaitez exercer vos droits, veuillez nous
             contacter à{" "}
             <a
-              href="mailto:contact@anthonyportfolio.com"
+              href="mailto:an.lellouche@gmail.com"
               className="text-blue-500 hover:underline"
               aria-label="Envoyer un email à Anthony Portfolio"
             >
-              contact@anthonyportfolio.com
+              an.lellouche@gmail.com
             </a>
             .
           </p>
@@ -123,11 +125,11 @@ const Privacy = () => {
             Si vous avez des questions concernant cette politique de
             confidentialité, n'hésitez pas à nous contacter via{" "}
             <a
-              href="mailto:contact@anthonyportfolio.com"
+              href="mailto:an.lellouche@gmail.com"
               className="text-blue-500 hover:underline"
               aria-label="Envoyer un email à Anthony Portfolio"
             >
-              contact@anthonyportfolio.com
+              an.lellouche@gmail.com
             </a>
             .
           </p>
