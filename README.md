@@ -20,3 +20,14 @@ Pour initialiser le projet.
 # Lancer le serveur avec vite
 
     pnpm run dev
+
+# Le portfolio a été utilisé avec :
+
+    * Vite 
+    * PNPM
+    * REACT
+    * TaillwindCSS
+    * GH-pages
+    * React-router
+    * React-icons
+
