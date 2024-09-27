@@ -2,12 +2,48 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/webp" href="./assets/profil.webp" />
+    <meta
+      name="description"
+      content="Découvrez le portfolio d'Anthony Lellouche, intégrateur web."
+    />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portfolio Anthony" />
+    <meta
+      property="og:description"
+      content="Portfolio d'Anthony Lellouche, intégrateur web spécialisé."
+    />
+    <meta
+      property="og:image"
+      content="https://anthonyportfolio.com/assets/profil.webp"
+    />
+    <meta property="og:url" content="https://anthonyportfolio.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portfolio Anthony" />
+    <meta
+      name="twitter:description"
+      content="Portfolio d'Anthony Lellouche, intégrateur web."
+    />
+    <meta
+      name="twitter:image"
+      content="https://anthonyportfolio.com/assets/profil.webp"
+    />
+
+    <link
+      rel="icon"
+      type="image/webp"
+      href="./assets/profil.webp"
+      alt="Icône du site"
+      rel="preload"
+      as="image"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Porfolio Anthony</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx" defer></script>
   </body>
 </html>
