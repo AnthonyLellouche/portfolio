@@ -20,7 +20,7 @@ const Projects = () => {
                 loading="lazy"
               />
               <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
-              <p className="text-gray-500 mb-4">{project.technologies}</p>
+              <p className="text-gray-400 mb-4">{project.technologies}</p>
               <p className="text-gray-300 mb-4">{project.description}</p>
               <a
                 href={project.github}

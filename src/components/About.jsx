@@ -28,6 +28,7 @@ const About = () => {
                 <div className="grow bg-gray-800 rounded-full h-2.5">
                   <div
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-11/12"
+                    role="progressbar"
                     aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -42,6 +43,7 @@ const About = () => {
                 <div className="grow bg-gray-800 rounded-full h-2.5">
                   <div
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"
+                    role="progressbar"
                     aria-valuenow="80"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -56,6 +58,7 @@ const About = () => {
                 <div className="grow bg-gray-800 rounded-full h-2.5">
                   <div
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-8/12"
+                    role="progressbar"
                     aria-valuenow="70"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -70,6 +73,7 @@ const About = () => {
                 <div className="grow bg-gray-800 rounded-full h-2.5">
                   <div
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-9/12"
+                    role="progressbar"
                     aria-valuenow="75"
                     aria-valuemin="0"
                     aria-valuemax="100"

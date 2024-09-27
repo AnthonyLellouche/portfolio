@@ -26,7 +26,7 @@ const Service = () => {
                 aria-label={`Me contacter pour ${service.title}`}
                 className="mt-4 inline-block text-green-400 hover:text-blue-500"
               >
-                <a>Me contacter.</a>
+                <p>Me contacter.</p>
               </Link>
             </div>
           ))}
