@@ -31,6 +31,17 @@ const Projects = () => {
               >
                 GitHub
               </a>
+              {project.site && (
+                <a
+                  href={project.site}
+                  className="inline-block bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-4 py-2 rounded-full ml-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visiter le site de ${project.name}`}
+                >
+                  Visiter le site
+                </a>
+              )}
             </div>
           ))}
         </div>

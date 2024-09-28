@@ -22,6 +22,7 @@
       "technologies": "SEO, accessibilité, Lighthouse",
       "image": "ninacarducci.webp",
       "github": "https://github.com/AnthonyLellouche/nina-carducci",
+      "site": "https://anthonylellouche.github.io/nina-carducci/",
       "description": "Optimisation du référencement du site de Nina Carducci."
     },
     {
@@ -38,6 +39,7 @@
       "technologies": "HTML & SCSS",
       "image": "ohmyfood.webp",
       "github": "https://github.com/AnthonyLellouche/ohmyfoodparis",
+      "site": "https://anthonylellouche.github.io/ohmyfoodparis/",
       "description": "Développer un site mobile-first qui répertorie les menus de restaurants."
     },
     {
@@ -55,6 +57,15 @@
       "image": "sophiebluel.webp",
       "github": "https://github.com/AnthonyLellouche/sophiebluel",
       "description": "Création d'une page web dynamique pour le site internet d'une architecte d'intérieur."
+    },
+    {
+      "id": 8,
+      "name": "Print-it",
+      "technologies": "HTML & JS",
+      "image": "printit.webp",
+      "github": "https://github.com/AnthonyLellouche/print-it",
+      "site": "https://anthonylellouche.github.io/print-it/",
+      "description": "Création d'une page web pour une société d'imprimerie."
     }
   ],
   "services": [
