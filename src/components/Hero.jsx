@@ -20,11 +20,11 @@ const Hero = () => {
       </p>
       <div className="mt-8 space-x-4">
         <Link
-          to="/#contact"
+          to="/#project"
           aria-label="Me contacter via la section contact"
           className="bg-gradient-to-r from-green-400 to-blue-500 text-white md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 rounded-full"
         >
-          Me contacter
+          Mes projets
         </Link>
         <Link
           to="/#service"
