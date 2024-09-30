@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="bg-black text-white text-center py-16">
+    <div className="bg-black text-white text-center py-16 px-2">
       <img
         src="./assets/profil.webp"
         alt="Photo de profil d'Anthony"

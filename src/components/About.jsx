@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 const About = () => {
   return (
-    <div className="bg-black text-white py-20" id="about">
+    <div className="bg-black text-white py-10" id="about">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <h1 className="text-4xl font-bold text-center mb-12">
           A propos de moi
@@ -21,7 +21,7 @@ const About = () => {
               solutions technologiques innovantes et performantes.
             </p>
             <div className="space-y-4">
-              <div className="flex items-center">
+              <div className="flex items-center gap-3">
                 <label htmlFor="htmlandcss" className="w-2/12">
                   HTML & CSS
                 </label>
@@ -36,7 +36,7 @@ const About = () => {
                   ></div>
                 </div>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center gap-3">
                 <label htmlFor="reactjs" className="w-2/12">
                   React JS
                 </label>
@@ -51,7 +51,7 @@ const About = () => {
                   ></div>
                 </div>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center gap-3">
                 <label htmlFor="angular" className="w-2/12">
                   Angular
                 </label>
@@ -66,7 +66,7 @@ const About = () => {
                   ></div>
                 </div>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center gap-3">
                 <label htmlFor="nodejs" className="w-2/12">
                   NodeJS
                 </label>

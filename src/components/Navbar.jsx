@@ -24,7 +24,7 @@ const Navbar = () => {
             <RxHamburgerMenu className=" text-green-400 size-8" />
           </button>
         </div>
-        <div className="space-x-6 hidden md:flex">
+        <div className="space-x-6 hidden md:flex px-3">
           <Link to="/#home" className="hover:text-gray-400">
             Home
           </Link>
