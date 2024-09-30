@@ -53,7 +53,11 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex-1 w-full pt-14">
-            <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
+            <form
+              className="max-w-md mx-auto"
+              onSubmit={handleSubmit}
+              id="form"
+            >
               <div className="relative z-0 w-full mb-5 group">
                 <input
                   type="email"

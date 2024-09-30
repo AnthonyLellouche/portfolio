@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black text-white px-8 md:px-16 lg:px-24">
+    <nav className="bg-black text-white px-8 md:px-12 lg:px-24">
       <div className="container mx-auto py-2 flex justify-between items-center">
         <Link to="/#home" className="hover:text-gray-400">
           <div className="text-2xl font-bold">Anthony</div>
@@ -24,20 +24,50 @@ const Navbar = () => {
             <RxHamburgerMenu className=" text-green-400 size-8" />
           </button>
         </div>
-        <div className="space-x-6 hidden md:flex px-3">
-          <Link to="/#home" className="hover:text-gray-400">
+        <div className="space-x-6 hidden md:flex px-2">
+          <Link
+            to="/#home"
+            className="hover:text-gray-400"
+            style={{
+              whiteSpace: "nowrap",
+            }}
+          >
             Home
           </Link>
-          <Link to="/#about" className="hover:text-gray-400">
+          <Link
+            to="/#about"
+            className="hover:text-gray-400"
+            style={{
+              whiteSpace: "nowrap",
+            }}
+          >
             À propos de moi
           </Link>
-          <Link to="/#service" className="hover:text-gray-400">
+          <Link
+            to="/#service"
+            className="hover:text-gray-400"
+            style={{
+              whiteSpace: "nowrap",
+            }}
+          >
             Mes services
           </Link>
-          <Link to="/#project" className="hover:text-gray-400">
+          <Link
+            to="/#project"
+            className="hover:text-gray-400"
+            style={{
+              whiteSpace: "nowrap",
+            }}
+          >
             Mes projets
           </Link>
-          <Link to="/#contact" className="hover:text-gray-400">
+          <Link
+            to="/#contact"
+            className="hover:text-gray-400"
+            style={{
+              whiteSpace: "nowrap",
+            }}
+          >
             Contact
           </Link>
         </div>
