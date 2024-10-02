@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
-import { FaEnvelope, FaPhone, FaMapMarkedAlt } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
@@ -37,13 +37,13 @@ const Contact = () => {
                 an.lellouche@gmail.com
               </a>
             </div>
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <FaPhone
                 className="inline-block text-green-400 mr-2"
                 aria-hidden="true"
               />
               <span>06.25.78.27.84</span>
-            </div>
+            </div> */}
             <div className="mb-4">
               <FaMapMarkedAlt
                 className="inline-block text-green-400 mr-2"

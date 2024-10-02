@@ -72,12 +72,12 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <Link
+        {/* <Link
           to="/login"
           className="bg-gradient-to-r from-green-400 to-blue-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 rounded-full"
         >
           Connexion
-        </Link>
+        </Link> */}
       </div>
       {menuOpen && (
         <div className="md:hidden bg-gray-800 bg-opacity-90 text-white flex flex-col space-y-4 mt-4 text-center p-4 rounded-lg">
@@ -116,13 +116,13 @@ const Navbar = () => {
           >
             Contact
           </Link>
-          <Link
+          {/* <Link
             aria-label="Aller à la section connexion"
             to="/login"
             className="bg-gradient-to-r from-green-400 to-blue-500 text-white md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 rounded-full"
           >
             Connexion
-          </Link>
+          </Link> */}
         </div>
       )}
     </nav>
