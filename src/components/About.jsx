@@ -1,7 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
+import useDarkMode from "../params/useDarkMode";
+
 const About = () => {
+  const darkMode = useDarkMode();
+
   return (
-    <div className="bg-black text-white py-10" id="about">
+    <div
+      className={`${
+        darkMode ? "bg-black text-white" : "bg-white text-black"
+      } py-10`}
+      id="about"
+    >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <h1 className="text-4xl font-bold text-center mb-12">
           A propos de moi
@@ -13,7 +22,7 @@ const About = () => {
             className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
           />
           <div className="flex-1">
-            <p className="text-lg mb-8">
+            <p className="text-lg mb-8 ${darkMode ? 'text-gray-300' : 'text-gray-700'}">
               Fort d’une passion prononcée pour le développement web, je me suis
               spécialisé dans le secteur médical, avec un intérêt particulier
               pour le domaine de l’imagerie médicale. Ce secteur m’inspire par
@@ -25,7 +34,11 @@ const About = () => {
                 <label htmlFor="htmlandcss" className="w-2/12">
                   HTML & CSS
                 </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
+                <div
+                  className={`${
+                    darkMode ? "bg-gray-800" : "bg-gray-200"
+                  } grow rounded-full h-2.5`}
+                >
                   <div
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-9/12"
                     role="progressbar"
@@ -40,7 +53,11 @@ const About = () => {
                 <label htmlFor="reactjs" className="w-2/12">
                   React JS
                 </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
+                <div
+                  className={`${
+                    darkMode ? "bg-gray-800" : "bg-gray-200"
+                  } grow rounded-full h-2.5`}
+                >
                   <div
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-8/12"
                     role="progressbar"
@@ -55,7 +72,11 @@ const About = () => {
                 <label htmlFor="angular" className="w-2/12">
                   Angular
                 </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
+                <div
+                  className={`${
+                    darkMode ? "bg-gray-800" : "bg-gray-200"
+                  } grow rounded-full h-2.5`}
+                >
                   <div
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-6/12"
                     role="progressbar"
@@ -70,7 +91,11 @@ const About = () => {
                 <label htmlFor="nodejs" className="w-2/12">
                   NodeJS
                 </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
+                <div
+                  className={`${
+                    darkMode ? "bg-gray-800" : "bg-gray-200"
+                  } grow rounded-full h-2.5`}
+                >
                   <div
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-5/12"
                     role="progressbar"

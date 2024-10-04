@@ -1,16 +1,22 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
+import useDarkMode from "../params/useDarkMode"; 
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const darkMode = useDarkMode();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <nav className="bg-black text-white px-8 md:px-12 lg:px-24">
+    <nav
+      className={`${
+        darkMode ? "bg-black text-white" : "bg-white text-black"
+      } px-8 md:px-12 lg:px-24`}
+    >
       <div className="container mx-auto py-2 flex justify-between items-center">
         <Link to="/#home" className="hover:text-gray-400">
           <div className="text-2xl font-bold">Anthony</div>
@@ -18,10 +24,10 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="focus:outline-none text-white"
+            className="focus:outline-none"
             aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           >
-            <RxHamburgerMenu className=" text-green-400 size-8" />
+            <RxHamburgerMenu className="text-green-400 size-8" />
           </button>
         </div>
         <div className="space-x-6 hidden md:flex px-2">
@@ -81,39 +87,19 @@ const Navbar = () => {
       </div>
       {menuOpen && (
         <div className="md:hidden bg-gray-800 bg-opacity-90 text-white flex flex-col space-y-4 mt-4 text-center p-4 rounded-lg">
-          <Link
-            to="/#home"
-            className="hover:text-gray-400"
-            aria-label="Aller à la section Accueil"
-          >
+          <Link to="/#home" className="hover:text-gray-400">
             Home
           </Link>
-          <Link
-            to="/#about"
-            className="hover:text-gray-400"
-            aria-label="Aller à la section a propos de moi"
-          >
+          <Link to="/#about" className="hover:text-gray-400">
             À propos de moi
           </Link>
-          <Link
-            to="/#service"
-            className="hover:text-gray-400"
-            aria-label="Aller à la section services"
-          >
+          <Link to="/#service" className="hover:text-gray-400">
             Mes services
           </Link>
-          <Link
-            to="/#project"
-            className="hover:text-gray-400"
-            aria-label="Aller à la section projets"
-          >
+          <Link to="/#project" className="hover:text-gray-400">
             Mes projets
           </Link>
-          <Link
-            to="/#contact"
-            className="hover:text-gray-400"
-            aria-label="Aller à la section Contact"
-          >
+          <Link to="/#contact" className="hover:text-gray-400">
             Contact
           </Link>
           {/* <Link

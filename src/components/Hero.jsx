@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
+import useDarkMode from "../params/useDarkMode";
 
 const Hero = () => {
+  const darkMode = useDarkMode();
+
   return (
-    <div className="bg-black text-white text-center py-16 px-2">
+    <div
+      className={`${
+        darkMode ? "bg-black text-white" : "bg-white text-black"
+      } text-center py-16 px-2`}
+    >
       <img
         src="./assets/profil.webp"
         alt="Photo de profil d'Anthony"
@@ -15,7 +22,7 @@ const Hero = () => {
         </span>
         , intégrateur Web chez NEHS Digital/Enovacom
       </h1>
-      <p className="mt-4 text-lg text-gray-300">
+      <p className="mt-4 text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}">
         Spécialiste dans la création de sites modernes et responsives
       </p>
       <div className="flex flex-row mt-4 p-4 rounded-lg items-center justify-center gap-6">
@@ -28,7 +35,7 @@ const Hero = () => {
         </Link>
         <Link
           to="/#project"
-          aria-label="Me contacter via la section contact"
+          aria-label="Voir mes projets"
           className="bg-gradient-to-r from-green-400 to-blue-500 text-white md:inline transform transition-transform duration-200 hover:scale-x-105 px-4 py-2 rounded-full"
         >
           Mes projets
