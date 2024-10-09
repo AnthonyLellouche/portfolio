@@ -1,0 +1,71 @@
+{
+  "navbar": {
+    "home": "Home",
+    "aboutMe": "À propos de moi",
+    "myServices": "Mes services",
+    "myProjects": "Mes projets",
+    "contact": "Contact",
+    "login": "Connexion",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "goToLogin": "Aller à la section connexion"
+  },
+  "hero": {
+    "profilePhotoAlt": "Photo de profil d'Anthony",
+    "iam": "Je suis",
+    "jobTitle": "intégrateur Web chez NEHS Digital/Enovacom",
+    "specialistInModernSites": "Spécialiste dans la création de sites modernes et responsives",
+    "viewServices": "Voir mes services",
+    "viewProjects": "Voir mes projets",
+    "myServices": "Mes services",
+    "myProjects": "Mes projets"
+  },
+  "about": {
+    "aboutTitle": "À propos de moi",
+    "description": "Fort d’une passion prononcée pour le développement web, je me suis spécialisé dans le secteur médical, avec un intérêt particulier pour le domaine de l’imagerie médicale. Ce secteur m’inspire par son potentiel à améliorer les diagnostics et les soins grâce à des solutions technologiques innovantes et performantes.",
+    "costumePhotoAlt": "Photo d'Anthony en costume",
+    "skill": {
+      "htmlcss": "Compétence HTML et CSS",
+      "react": "Compétence React JS",
+      "angular": "Compétence Angular",
+      "node": "Compétence NoodeJS"
+    },
+    "xp": {
+      "years": "Années d'expériences",
+      "projects": "Projets terminés",
+      "satisfied": "Clients staisfaits"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "contactMe": "Me contacter",
+    "moreInfo": "Vous voulez en savoir plus sur moi? Contactez-moi!",
+    "email": "Votre adresse mail",
+    "firstName": "Votre prénom",
+    "lastName": "Votre nom",
+    "phone": "Votre téléphone",
+    "company": "Votre entreprise",
+    "message": "Votre message",
+    "send": "Envoyer",
+    "privacy": "J'accepte la",
+    "privacyPolicy": "politique de confidentialité",
+    "messageSent": "Message envoyé",
+    "thankYouMessage": "Merci de m'avoir contacté. Je vous répondrai dès que possible.",
+    "close": "Fermer",
+    "address": "1501, Routes des Dolines, 06600 Valbonne."
+  },
+  "footer": {
+    "intro": "Intégrateur Web basé sur Sophia-Antipolis, spécialisé dans l'Imagerie Médicale.",
+    "emailPlaceholder": "Votre adresse mail",
+    "subscribeButton": "M'abonner",
+    "privacyPolicy": "Politique de confidentialité",
+    "facebookLink": "Lien vers mon profil Facebook",
+    "twitterLink": "Lien vers mon profil Twitter/X",
+    "linkedinLink": "Lien vers mon profil LinkedIn",
+    "githubLink": "Lien vers mon profil GitHub",
+    "subscriptionSuccess": "Abonnement réussi",
+    "subscriptionMessage": "Merci de vous être abonné à notre newsletter.",
+    "closeButton": "Fermer",
+    "closeModal": "Fermer la modale"
+  }
+}

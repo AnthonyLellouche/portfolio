@@ -1,0 +1,71 @@
+{
+  "navbar": {
+    "home": "Home",
+    "aboutMe": "About me",
+    "myServices": "My services",
+    "myProjects": "My projects",
+    "contact": "Contact",
+    "login": "Login",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "goToLogin": "Go to section login"
+  },
+  "hero": {
+    "profilePhotoAlt": "Profile photo of Anthony",
+    "iam": "I am",
+    "jobTitle": "Web Integrator at NEHS Digital/Enovacom",
+    "specialistInModernSites": "Specialist in creating modern and responsive websites",
+    "viewServices": "View my services",
+    "viewProjects": "View my projects",
+    "myServices": "My services",
+    "myProjects": "My projects"
+  },
+  "about": {
+    "aboutTitle": "About me",
+    "description": "With a strong passion for web development, I specialized in the medical sector, with a particular interest in the field of medical imaging. This sector inspires me with its potential to improve diagnostics and care thanks to innovative and efficient technological solutions.",
+    "costumePhotoAlt": "Picture of Anthony in costume",
+    "skill": {
+      "htmlcss": "HTML and CSS skills",
+      "react": "React JS skill",
+      "angular": "Angular skill",
+      "node": "NodeJS skill"
+    },
+    "xp": {
+      "years": "Years of experience",
+      "projects": "Completed projects",
+      "satisfied": "Satisfied customers"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "contactMe": "Contact me",
+    "moreInfo": "Want to know more about me? Contact me!",
+    "email": "Your email address",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "phone": "Your phone",
+    "company": "Your enterprise",
+    "message": "Your message",
+    "send": "Send",
+    "privacy": "I accept this",
+    "privacyPolicy": "privacy policy",
+    "messageSent": "Message sent",
+    "thankYouMessage": "Thank you for contacting me. I will respond as soon as possible.",
+    "close": "Close",
+    "address": "1501, Routes des Dolines, 06600 Valbonne."
+  },
+  "footer": {
+    "intro": "Web integrator based in Sophia-Antipolis, specialized in Medical Imaging.",
+    "emailPlaceholder": "Your email address",
+    "subscribeButton": "Subscribe",
+    "privacyPolicy": "Privacy Policy",
+    "facebookLink": "Link to my Facebook profile",
+    "twitterLink": "Link to my Twitter/X profile",
+    "linkedinLink": "Link to my LinkedIn profile",
+    "githubLink": "Link to my GitHub profile",
+    "subscriptionSuccess": "Subscription Successful",
+    "subscriptionMessage": "Thank you for subscribing to our newsletter.",
+    "closeButton": "Close",
+    "closeModal": "Close the modal"
+  }
+}
