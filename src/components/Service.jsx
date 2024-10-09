@@ -1,10 +1,15 @@
-import data from "../data/data.json";
+import { useTranslation } from "react-i18next";
+import data from "../data/data.json"; // Assure-toi que le fichier data.json inclut les deux langues
 import { Link } from "react-router-dom";
 import useDarkMode from "../params/useDarkMode";
 
 const Service = () => {
-  const { services } = data;
+  const { i18n } = useTranslation();
   const darkMode = useDarkMode();
+
+  // Récupérer les données de la langue courante (fr ou en)
+  const language = i18n.language === "fr" ? "fr" : "en";
+  const services = data[language].services;
 
   return (
     <div
@@ -14,7 +19,9 @@ const Service = () => {
       id="service"
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12">Mes services</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">
+          {i18n.language === "fr" ? "Mes services" : "My Services"}
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <div
@@ -41,7 +48,7 @@ const Service = () => {
                 aria-label={`Me contacter pour ${service.title}`}
                 className="mt-4 inline-block text-green-400 hover:text-blue-500"
               >
-                <p>Me contacter.</p>
+                <p>{i18n.language === "fr" ? "Me contacter" : "Contact me"}</p>
               </Link>
             </div>
           ))}

@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
-import useDarkMode from "../params/useDarkMode"; 
-
+import useDarkMode from "../params/useDarkMode";
+import { useTranslation } from "react-i18next"; 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const darkMode = useDarkMode();
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -25,7 +26,7 @@ const Navbar = () => {
           <button
             onClick={toggleMenu}
             className="focus:outline-none"
-            aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-label={menuOpen ? t("navbar.closeMenu") : t("navbar.openMenu")}
           >
             <RxHamburgerMenu className="text-green-400 size-8" />
           </button>
@@ -38,7 +39,7 @@ const Navbar = () => {
               whiteSpace: "nowrap",
             }}
           >
-            Home
+            {t("navbar.home")}
           </Link>
           <Link
             to="/#about"
@@ -47,7 +48,7 @@ const Navbar = () => {
               whiteSpace: "nowrap",
             }}
           >
-            À propos de moi
+            {t("navbar.aboutMe")}
           </Link>
           <Link
             to="/#service"
@@ -56,7 +57,7 @@ const Navbar = () => {
               whiteSpace: "nowrap",
             }}
           >
-            Mes services
+            {t("navbar.myServices")}
           </Link>
           <Link
             to="/#project"
@@ -65,7 +66,7 @@ const Navbar = () => {
               whiteSpace: "nowrap",
             }}
           >
-            Mes projets
+            {t("navbar.myProjects")}
           </Link>
           <Link
             to="/#contact"
@@ -74,7 +75,7 @@ const Navbar = () => {
               whiteSpace: "nowrap",
             }}
           >
-            Contact
+            {t("navbar.contact")}
           </Link>
         </div>
 
@@ -82,32 +83,32 @@ const Navbar = () => {
           to="/login"
           className="bg-gradient-to-r from-green-400 to-blue-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 rounded-full"
         >
-          Connexion
+          {t("navbar.login")}
         </Link> */}
       </div>
       {menuOpen && (
         <div className="md:hidden bg-gray-800 bg-opacity-90 text-white flex flex-col space-y-4 mt-4 text-center p-4 rounded-lg">
           <Link to="/#home" className="hover:text-gray-400">
-            Home
+            {t("navbar.home")}
           </Link>
           <Link to="/#about" className="hover:text-gray-400">
-            À propos de moi
+            {t("navbar.aboutMe")}
           </Link>
           <Link to="/#service" className="hover:text-gray-400">
-            Mes services
+            {t("navbar.myServices")}
           </Link>
           <Link to="/#project" className="hover:text-gray-400">
-            Mes projets
+            {t("navbar.myProjects")}
           </Link>
           <Link to="/#contact" className="hover:text-gray-400">
-            Contact
+            {t("navbar.contact")}
           </Link>
           {/* <Link
-            aria-label="Aller à la section connexion"
+            aria-label={t("navbar.goToLogin")}
             to="/login"
             className="bg-gradient-to-r from-green-400 to-blue-500 text-white md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 rounded-full"
           >
-            Connexion
+            {t("navbar.login")}
           </Link> */}
         </div>
       )}

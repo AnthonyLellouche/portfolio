@@ -1,13 +1,14 @@
-/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import useDarkMode from "../params/useDarkMode";
+import { useTranslation } from "react-i18next"; 
 
 const Footer = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
   const darkMode = useDarkMode();
+  const { t } = useTranslation(); 
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -29,8 +30,7 @@ const Footer = () => {
           <div className="flex-1 mb-4 md:mb-0">
             <h3 className="text-2xl font-bold mb-2">Anthony</h3>
             <p className={`${darkMode ? "text-gray-400" : "text-gray-700"}`}>
-              Intégrateur Web basé sur Sophia-Antipolis, spécialisé dans
-              l'Imagerie Médicale.
+              {t("footer.intro")}
             </p>
           </div>
           <div className="flex-1 w-full">
@@ -40,7 +40,7 @@ const Footer = () => {
             >
               <input
                 type="email"
-                placeholder="Votre adresse mail"
+                placeholder={t("footer.emailPlaceholder")}
                 className={`w-full p-2 rounded-l-lg ${
                   darkMode
                     ? "bg-gray-800 border-gray-600"
@@ -52,7 +52,7 @@ const Footer = () => {
                 type="submit"
                 className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-r-lg"
               >
-                M'abonner
+                {t("footer.subscribeButton")}
               </button>
             </form>
           </div>
@@ -76,7 +76,7 @@ const Footer = () => {
                   ? "text-gray-400 hover:text-white"
                   : "text-gray-700 hover:text-black"
               }`}
-              aria-label="Lien vers mon profil Facebook"
+              aria-label={t("footer.facebookLink")}
             >
               <FaFacebook />
             </a>
@@ -89,7 +89,7 @@ const Footer = () => {
                   ? "text-gray-400 hover:text-white"
                   : "text-gray-700 hover:text-black"
               }`}
-              aria-label="Lien vers mon profil Twitter/X"
+              aria-label={t("footer.twitterLink")}
             >
               <FaXTwitter />
             </a>
@@ -102,7 +102,7 @@ const Footer = () => {
                   ? "text-gray-400 hover:text-white"
                   : "text-gray-700 hover:text-black"
               }`}
-              aria-label="Lien vers mon profil linkedin"
+              aria-label={t("footer.linkedinLink")}
             >
               <FaLinkedin />
             </a>
@@ -115,7 +115,7 @@ const Footer = () => {
                   ? "text-gray-400 hover:text-white"
                   : "text-gray-700 hover:text-black"
               }`}
-              aria-label="Lien vers mon profil GitHub"
+              aria-label={t("footer.githubLink")}
             >
               <FaGithub />
             </a>
@@ -129,7 +129,7 @@ const Footer = () => {
                     : "text-gray-700 hover:text-black"
                 }`}
               >
-                Politique de confidentialité
+                {t("footer.privacyPolicy")}
               </p>
             </div>
           </Link>
@@ -138,23 +138,25 @@ const Footer = () => {
 
       {isSubscribed && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-20"
+          className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-80"
           role="dialog"
           aria-labelledby="modalTitle"
         >
           <div
             className={`${
-              darkMode ? "bg-black" : "bg-white"
+              darkMode ? "bg-black" : "bg-gray-100"
             } p-6 rounded-lg text-center`}
           >
-            <h3 className="text-2xl font-bold mb-4">Abonnement réussi</h3>
-            <p>Merci de vous être abonné à notre newsletter.</p>
+            <h3 className="text-2xl font-bold mb-4">
+              {t("footer.subscriptionSuccess")}
+            </h3>
+            <p>{t("footer.subscriptionMessage")}</p>
             <button
               className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 mt-5 rounded-full"
               onClick={closeModal}
-              aria-label="Fermer la modale"
+              aria-label={t("footer.closeModal")}
             >
-              Fermer
+              {t("footer.closeButton")}
             </button>
           </div>
         </div>

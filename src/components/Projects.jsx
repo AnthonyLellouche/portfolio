@@ -1,9 +1,13 @@
+import { useTranslation } from "react-i18next";
 import data from "../data/data.json";
 import useDarkMode from "../params/useDarkMode";
 
 const Projects = () => {
-  const { projects } = data;
+  const { t, i18n } = useTranslation();
   const darkMode = useDarkMode();
+
+  const language = i18n.language === "fr" ? "fr" : "en";
+  const projects = data[language].projects;
 
   return (
     <div
@@ -13,7 +17,9 @@ const Projects = () => {
       id="project"
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12">Mes projets</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">
+          {t("hero.myProjects")}
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
