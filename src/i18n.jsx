@@ -10,8 +10,8 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: "en",
-    lng: "fr", // force le choix langue
+    fallbackLng: "fr",
+    // lng: "fr", // force le choix langue
     debug: true,
     load: "languageOnly",
     interpolation: {
