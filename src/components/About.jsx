@@ -20,7 +20,7 @@ const About = () => {
           <img
             src="./assets/aboutme.webp"
             alt={t("about.costumePhotoAlt")}
-            className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
+            className="w-72 h-96 rounded-md object-cover mb-8 md:mb-0"
           />
           <div className="flex-1">
             <p className="text-lg mb-8 ${darkMode ? 'text-gray-300' : 'text-gray-700'}">

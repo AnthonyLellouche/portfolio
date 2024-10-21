@@ -15,7 +15,7 @@ const Hero = () => {
       <img
         src="./assets/profil.webp"
         alt={t("hero.profilePhotoAlt")}
-        className="mx-auto mb-8 w-48 h-48 rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
+        className="mx-auto mb-8 w-64 h-64 rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
       />
       <h1 className="text-4xl font-bold">
         {t("hero.iam")}{" "}
