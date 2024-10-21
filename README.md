@@ -21,6 +21,10 @@ Pour initialiser le projet.
 
     pnpm run dev
 
+# Lancer le deploiement
+
+    pnpm run deploy
+
 # Le portfolio a été utilisé avec :
 
     * Vite 
