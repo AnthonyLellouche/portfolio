@@ -1,7 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useEffect } from "react";
+
 import Navbar from "../components/Navbar";
 
 const Privacy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />

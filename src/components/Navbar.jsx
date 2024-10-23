@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import useDarkMode from "../params/useDarkMode";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const darkMode = useDarkMode();
@@ -15,13 +15,22 @@ const Navbar = () => {
   return (
     <nav
       className={`${
-        darkMode ? "bg-black text-white" : "bg-white text-black"
-      } px-8 md:px-12 lg:px-24`}
+        darkMode
+          ? "bg-black text-white border-b border-gray-700"
+          : "bg-white text-black border-b border-gray-200"
+      } px-8 md:px-12 lg:px-24 `}
     >
       <div className="container mx-auto py-2 flex justify-between items-center">
-        <Link to="/#home" className="hover:text-gray-400">
-          <div className="text-2xl font-bold">Anthony</div>
-        </Link>
+        <div className="flex items-center space-x-2 gap-2">
+          <img
+            src="./assets/astro.svg"
+            alt="logo entreprise actuel"
+            className="w-16"
+          />
+          <Link to="/#home" className="hover:text-gray-400">
+            <div className="text-3xl font-bold">Anthony</div>
+          </Link>
+        </div>
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
@@ -31,7 +40,7 @@ const Navbar = () => {
             <RxHamburgerMenu className="text-green-400 size-8" />
           </button>
         </div>
-        <div className="space-x-6 hidden md:flex px-2">
+        <div className="space-x-3 hidden md:flex px-2 font-semibold">
           <Link
             to="/#home"
             className="hover:text-gray-400"
@@ -87,7 +96,12 @@ const Navbar = () => {
         </Link> */}
       </div>
       {menuOpen && (
-        <div className="md:hidden bg-gray-800 bg-opacity-90 text-white flex flex-col space-y-4 mt-4 text-center p-4 rounded-lg">
+        <div   className={`${
+          darkMode
+            ? " bg-gray-800 bg-opacity-90 text-white border-gray-700"
+            : " bg-gray-100 bg-opacity-80 text-black border-gray-200"
+        } md:hidden flex flex-col space-y-4 text-center p-4 rounded-xl my-4`}>
+            
           <Link to="/#home" className="hover:text-gray-400">
             {t("navbar.home")}
           </Link>
