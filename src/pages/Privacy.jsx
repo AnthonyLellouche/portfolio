@@ -14,7 +14,7 @@ const Privacy = () => {
           <p className="mb-4">
             Chez Anthony Portfolio, accessible depuis{" "}
             <a
-              href="https://anthonylellouche.github.io/portfolio/"
+              href={`${import.meta.env.BASE_URL}#home`}
               className="text-blue-500 hover:underline"
               aria-label="Accéder à anthonyportfolio.com"
             >
