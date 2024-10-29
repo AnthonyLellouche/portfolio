@@ -10,7 +10,7 @@ const Hero = () => {
     <div
       className={`${
         darkMode ? "bg-black text-white" : "bg-white text-black"
-      } text-center py-16 px-2`}
+      } text-center py-12 px-2`}
     >
       <img
         src="./assets/profil.webp"

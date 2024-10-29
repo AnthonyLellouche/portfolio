@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <div
       className={`${
-        darkMode ? "bg-black text-white" : "bg-white text-black"
+        darkMode ? "bg-black text-white border-t border-gray-700" : "bg-white text-black border-t border-gray-200"
       } py-8`}
       id="contact"
     >

@@ -14,8 +14,8 @@ const Service = () => {
   return (
     <div
       className={`${
-        darkMode ? "bg-black text-white" : "bg-white text-black"
-      } py-10`}
+        darkMode ? "bg-black text-white border-t border-gray-700" : "bg-white text-black border-t border-gray-200"
+      } pt-12 pb-20`}
       id="service"
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
