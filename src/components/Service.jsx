@@ -1,13 +1,11 @@
 import { useTranslation } from "react-i18next";
-import data from "../data/data.json"; // Assure-toi que le fichier data.json inclut les deux langues
+import data from "../data/data.json";
 import { Link } from "react-router-dom";
 import useDarkMode from "../params/useDarkMode";
 
 const Service = () => {
   const { i18n } = useTranslation();
   const darkMode = useDarkMode();
-
-  // Récupérer les données de la langue courante (fr ou en)
   const language = i18n.language === "fr" ? "fr" : "en";
   const services = data[language].services;
 
