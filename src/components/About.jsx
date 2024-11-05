@@ -1,3 +1,4 @@
+import React from "react";
 import useDarkMode from "../params/useDarkMode";
 import { useTranslation } from "react-i18next";
 
@@ -7,8 +8,11 @@ const About = () => {
 
   return (
     <div
+      data-testid="about"
       className={`${
-        darkMode ? "bg-black text-white border-t border-gray-700" : "bg-white text-black border-t border-gray-200"
+        darkMode
+          ? "bg-black text-white border-t border-gray-700"
+          : "bg-white text-black border-t border-gray-200"
       } py-12`}
       id="about"
     >
