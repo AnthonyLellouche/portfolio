@@ -34,4 +34,7 @@ Pour initialiser le projet.
     * GH-pages
     * React-router
     * React-icons
+    * Commintlint
+    * Babel
+    * Jest
 
