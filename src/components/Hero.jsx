@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import useDarkMode from "../params/useDarkMode";
+import { useTheme } from "../params/ThemeContext";
 
 const Hero = () => {
-  const darkMode = useDarkMode();
+  const { darkMode } = useTheme();
   const { t } = useTranslation();
 
   return (

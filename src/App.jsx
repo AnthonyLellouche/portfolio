@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import { useEffect } from "react";
 
+import { ThemeProvider } from "./params/ThemeContext";
+
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -35,27 +37,30 @@ const ScrollToHashElement = () => {
 const App = () => {
   const basename = import.meta.env.MODE === "production" ? "/portfolio" : "";
   return (
-    <Router basename={basename}>
-      <ScrollToHashElement />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              <Navbar />
-              <Hero id="home" />
-              <About id="about" />
-              <Service id="service" />
-              <Projects id="project" />
-              <Contact id="contact" />
-              <Footer />
-            </div>
-          }
-        />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </Router>
+    <ThemeProvider>
+      {" "}
+      <Router basename={basename}>
+        <ScrollToHashElement />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div>
+                <Navbar />
+                <Hero id="home" />
+                <About id="about" />
+                <Service id="service" />
+                <Projects id="project" />
+                <Contact id="contact" />
+                <Footer />
+              </div>
+            }
+          />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 };
 

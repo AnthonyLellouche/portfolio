@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import data from "../data/data.json";
-import useDarkMode from "../params/useDarkMode";
+import { useTheme } from "../params/ThemeContext";
 
 const Projects = () => {
   const { t, i18n } = useTranslation();
-  const darkMode = useDarkMode();
+  const { darkMode } = useTheme();
 
   const language = i18n.language === "fr" ? "fr" : "en";
   const projects = data[language].projects;

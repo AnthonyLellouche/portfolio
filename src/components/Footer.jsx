@@ -3,14 +3,14 @@ import { useState } from "react";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import useDarkMode from "../params/useDarkMode";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
+import { useTheme } from "../params/ThemeContext";
 
 const Footer = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const darkMode = useDarkMode();
-  const { t } = useTranslation(); 
-
+  const { darkMode } = useTheme();
+  const { t } = useTranslation();
+  
   const handleSubscribe = (e) => {
     e.preventDefault();
     setIsSubscribed(true);

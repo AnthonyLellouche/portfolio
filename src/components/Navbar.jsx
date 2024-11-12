@@ -1,18 +1,20 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
-import useDarkMode from "../params/useDarkMode";
-import { useTranslation } from "react-i18next";
-import i18n from "../params/i18n";
 
+import { RxHamburgerMenu } from "react-icons/rx";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { LuSun } from "react-icons/lu";
 import { Menu } from "@headlessui/react";
 import { FaChevronDown } from "react-icons/fa";
+
+import { useTheme } from "../params/ThemeContext";
+import { useTranslation } from "react-i18next";
+import i18n from "../params/i18n";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("");
-  const darkMode = useDarkMode();
+  const { darkMode, toggleDarkMode } = useTheme();
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -119,6 +121,21 @@ const Navbar = () => {
           <Link to="/#contact" className="hover:text-gray-400">
             {t("navbar.contact")}
           </Link>
+          <div className="gap-2 flex items-center">
+            {darkMode ? (
+              <LuSun
+                className="cursor-pointer"
+                onClick={() => toggleDarkMode(false)}
+                title="Activer le mode clair"
+              />
+            ) : (
+              <MdOutlineDarkMode
+                className="cursor-pointer"
+                onClick={() => toggleDarkMode(true)}
+                title="Activer le mode sombre"
+              />
+            )}
+          </div>
         </div>
 
         {/* <Link

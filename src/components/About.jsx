@@ -1,9 +1,9 @@
 import React from "react";
-import useDarkMode from "../params/useDarkMode";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../params/ThemeContext";
 
 const About = () => {
-  const darkMode = useDarkMode();
+  const { darkMode } = useTheme();
   const { t } = useTranslation();
 
   return (

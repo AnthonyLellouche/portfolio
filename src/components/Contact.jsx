@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import useDarkMode from "../params/useDarkMode";
+
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../params/ThemeContext";
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const darkMode = useDarkMode();
+  const { darkMode } = useTheme();
   const { t } = useTranslation();
 
   const handleSubmit = (e) => {

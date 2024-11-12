@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
 import data from "../data/data.json";
 import { Link } from "react-router-dom";
-import useDarkMode from "../params/useDarkMode";
+import { useTheme } from "../params/ThemeContext";
 
 const Service = () => {
   const { i18n } = useTranslation();
-  const darkMode = useDarkMode();
+  const { darkMode } = useTheme();
   const language = i18n.language === "fr" ? "fr" : "en";
   const services = data[language].services;
 
