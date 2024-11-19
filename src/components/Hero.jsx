@@ -14,9 +14,9 @@ const Hero = () => {
       } text-center py-12 px-2`}
     >
       <img
-        src="./assets/profil.webp"
+        src="./assets/dev-profil.webp"
         alt={t("hero.profilePhotoAlt")}
-        className="mx-auto mb-8 w-64 h-64 rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
+        className="mx-auto mb-8 w-96 h-96 rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
       />
       <h1 className="text-4xl font-bold">
         {t("hero.iam")}{" "}
