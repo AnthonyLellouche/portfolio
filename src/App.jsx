@@ -8,16 +8,17 @@ import { useEffect } from "react";
 
 import { ThemeProvider } from "./params/ThemeContext";
 
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
-import Service from "./components/Service";
+import {
+  About,
+  Contact,
+  Footer,
+  Hero,
+  Navbar,
+  Projects,
+  Service,
+} from "./components";
 
-import Privacy from "./pages/Privacy";
-import Login from "./pages/Login";
+import { Privacy, Login } from "./pages";
 
 const ScrollToHashElement = () => {
   const location = useLocation();
