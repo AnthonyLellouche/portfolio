@@ -9,9 +9,8 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import Navbar from "../Navbar";
 import { MemoryRouter } from "react-router-dom";
+import { ThemeProvider } from "../../params/ThemeContext";
 import "@testing-library/jest-dom";
-import { useTranslation } from "react-i18next";
-import useDarkMode from "../../params/useDarkMode";
 
 // Mock pour `useTranslation` pour les traductions
 jest.mock("react-i18next", () => ({
@@ -20,26 +19,31 @@ jest.mock("react-i18next", () => ({
   }),
 }));
 
-// Mock pour `useDarkMode` pour simuler les modes clair et sombre
-jest.mock("../../params/useDarkMode");
-
 // Mock pour `i18n.changeLanguage` afin de tester le changement de langue
 jest.mock("../../params/i18n", () => ({
   changeLanguage: jest.fn(),
   language: "en",
 }));
 
-describe("Navbar Component", () => {
-  beforeEach(() => {
-    useDarkMode.mockReturnValue(false); // Par défaut en mode clair
-  });
+const renderWithProviders = (ui, darkMode = false) => {
+  global.window.matchMedia = jest.fn().mockImplementation((query) => ({
+    matches: darkMode, // Active ou désactive le mode sombre
+    media: query,
+    onchange: null,
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+  }));
 
+  render(
+    <ThemeProvider>
+      <MemoryRouter>{ui}</MemoryRouter>
+    </ThemeProvider>
+  );
+};
+
+describe("Navbar Component", () => {
   it("renders the navbar correctly in light mode", () => {
-    render(
-      <MemoryRouter>
-        <Navbar />
-      </MemoryRouter>
-    );
+    renderWithProviders(<Navbar />, false); // Mode clair
 
     // Vérifier le texte et les liens principaux
     expect(screen.getByText("Tony")).toBeInTheDocument();
@@ -54,24 +58,14 @@ describe("Navbar Component", () => {
   });
 
   it("renders the navbar correctly in dark mode", () => {
-    useDarkMode.mockReturnValue(true); // Simule le mode sombre
-
-    render(
-      <MemoryRouter>
-        <Navbar />
-      </MemoryRouter>
-    );
+    renderWithProviders(<Navbar />, true); // Mode sombre
 
     const navbar = screen.getByRole("navigation");
     expect(navbar).toHaveClass("bg-black text-white");
   });
 
   it("opens and closes the mobile menu", () => {
-    render(
-      <MemoryRouter>
-        <Navbar />
-      </MemoryRouter>
-    );
+    renderWithProviders(<Navbar />);
 
     // Vérifie que le menu mobile est fermé par défaut
     expect(screen.queryByText("navbar.home")).not.toBeInTheDocument();
@@ -86,11 +80,7 @@ describe("Navbar Component", () => {
   });
 
   it("changes language when language option is clicked", () => {
-    render(
-      <MemoryRouter>
-        <Navbar />
-      </MemoryRouter>
-    );
+    renderWithProviders(<Navbar />);
 
     // Obtenir tous les boutons et filtrer pour trouver le bouton de langue "EN"
     const languageButtons = screen.getAllByRole("button", { name: /EN/i });
@@ -113,12 +103,9 @@ describe("Navbar Component", () => {
     // Vérifie que la langue a été changée en français
     expect(screen.getByRole("button", { name: /FR/i })).toBeInTheDocument();
   });
+
   it("has accessible links with correct aria-labels", () => {
-    render(
-      <MemoryRouter>
-        <Navbar />
-      </MemoryRouter>
-    );
+    renderWithProviders(<Navbar />);
 
     expect(screen.getByLabelText("navbar.openMenu")).toBeInTheDocument();
   });

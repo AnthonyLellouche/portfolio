@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import Footer from "../Footer";
 import { MemoryRouter } from "react-router-dom";
+import { ThemeProvider } from "../../params/ThemeContext";
 import "@testing-library/jest-dom";
 
 // Mock de `useTranslation` pour injecter des valeurs de traduction dynamiques
@@ -26,13 +27,17 @@ beforeAll(() => {
     };
 });
 
+const renderWithProviders = (ui) => {
+  render(
+    <ThemeProvider>
+      <MemoryRouter>{ui}</MemoryRouter>
+    </ThemeProvider>
+  );
+};
+
 describe("Footer Component", () => {
   it("renders the footer correctly", () => {
-    render(
-      <MemoryRouter>
-        <Footer />
-      </MemoryRouter>
-    );
+    renderWithProviders(<Footer />);
 
     expect(screen.getByText("footer.intro")).toBeInTheDocument();
     expect(
@@ -48,11 +53,7 @@ describe("Footer Component", () => {
   });
 
   it("opens and closes the subscription success modal", () => {
-    render(
-      <MemoryRouter>
-        <Footer />
-      </MemoryRouter>
-    );
+    renderWithProviders(<Footer />);
 
     fireEvent.change(screen.getByPlaceholderText("footer.emailPlaceholder"), {
       target: { value: "test@example.com" },
@@ -71,11 +72,7 @@ describe("Footer Component", () => {
   });
 
   it("renders social media links with correct aria-labels", () => {
-    render(
-      <MemoryRouter>
-        <Footer />
-      </MemoryRouter>
-    );
+    renderWithProviders(<Footer />);
 
     expect(screen.getByLabelText("footer.facebookLink")).toBeInTheDocument();
     expect(screen.getByLabelText("footer.twitterLink")).toBeInTheDocument();
@@ -84,11 +81,7 @@ describe("Footer Component", () => {
   });
 
   it("renders the privacy policy link", () => {
-    render(
-      <MemoryRouter>
-        <Footer />
-      </MemoryRouter>
-    );
+    renderWithProviders(<Footer />);
 
     expect(screen.getByText("footer.privacyPolicy")).toBeInTheDocument();
   });

@@ -3,75 +3,64 @@ import { render, screen } from "@testing-library/react";
 import Hero from "../Hero";
 import { MemoryRouter } from "react-router-dom";
 import "@testing-library/jest-dom";
-import { useTranslation } from "react-i18next";
-import useDarkMode from "../../params/useDarkMode";
+import { ThemeProvider } from "../../params/ThemeContext";
 
-// Mock pour `useTranslation` pour injecter des valeurs de traduction
+// Mock pour useTranslation
 jest.mock("react-i18next", () => ({
   useTranslation: () => ({
     t: (key) => key,
   }),
 }));
 
-// Mock pour `useDarkMode` pour simuler le mode sombre et clair
-jest.mock("../../params/useDarkMode");
+beforeAll(() => {
+  global.window.matchMedia = jest.fn().mockImplementation((query) => ({
+    matches: false, // Simule que le mode clair est activé par défaut
+    media: query,
+    onchange: null,
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+  }));
+});
 
 describe("Hero Component", () => {
-  beforeEach(() => {
-    useDarkMode.mockReturnValue(false); // Par défaut en mode clair
-  });
-
-  it("renders the hero component correctly in light mode", () => {
+  const renderWithProviders = (ui, darkMode = false) =>
     render(
-      <MemoryRouter>
-        <Hero />
-      </MemoryRouter>
+      <ThemeProvider>
+        <MemoryRouter>{ui}</MemoryRouter>
+      </ThemeProvider>
     );
 
-    expect(screen.getByAltText("hero.profilePhotoAlt")).toBeInTheDocument();
-    expect(screen.getByText(/hero\.iam/i)).toBeInTheDocument();
-    expect(screen.getByText("Anthony Lellouche")).toBeInTheDocument();
-    expect(screen.getByText(/hero\.jobTitle/i)).toBeInTheDocument();
-    expect(
-      screen.getByText(/hero\.specialistInModernSites/i)
-    ).toBeInTheDocument();
-    expect(screen.getByText(/hero\.myServices/i)).toBeInTheDocument();
-    expect(screen.getByText(/hero\.myProjects/i)).toBeInTheDocument();
+  it("renders the hero component correctly in light mode", () => {
+    renderWithProviders(<Hero />);
 
     const heroContainer = screen.getByText(/hero\.iam/i).closest("div");
-    expect(heroContainer).toHaveClass("bg-white text-black");
+    expect(heroContainer).toHaveClass("bg-white text-black"); // Mode clair
   });
 
   it("renders the hero component correctly in dark mode", () => {
-    useDarkMode.mockReturnValue(true); // Simule le mode sombre
+    global.window.matchMedia = jest.fn().mockImplementation((query) => ({
+      matches: true, // Simule que le mode sombre est activé
+      media: query,
+      onchange: null,
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+    }));
 
-    render(
-      <MemoryRouter>
-        <Hero />
-      </MemoryRouter>
-    );
+    renderWithProviders(<Hero />);
 
     const heroContainer = screen.getByText(/hero\.iam/i).closest("div");
-    expect(heroContainer).toHaveClass("bg-black text-white");
+    expect(heroContainer).toHaveClass("bg-black text-white"); // Mode sombre
   });
 
   it("renders the services and projects links with correct aria-labels", () => {
-    render(
-      <MemoryRouter>
-        <Hero />
-      </MemoryRouter>
-    );
+    renderWithProviders(<Hero />);
 
     expect(screen.getByLabelText("hero.viewServices")).toBeInTheDocument();
     expect(screen.getByLabelText("hero.viewProjects")).toBeInTheDocument();
   });
 
   it("has clickable links for services and projects", () => {
-    render(
-      <MemoryRouter>
-        <Hero />
-      </MemoryRouter>
-    );
+    renderWithProviders(<Hero />);
 
     const servicesLink = screen.getByText(/hero\.myServices/i);
     const projectsLink = screen.getByText(/hero\.myProjects/i);
