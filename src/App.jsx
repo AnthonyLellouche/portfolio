@@ -18,6 +18,7 @@ import Service from "./components/Service";
 
 import Privacy from "./pages/Privacy";
 import Login from "./pages/Login";
+import Error404 from "./pages/Error404";
 
 const ScrollToHashElement = () => {
   const location = useLocation();
@@ -52,12 +53,14 @@ const App = () => {
                 <Service id="service" />
                 <Projects id="project" />
                 <Contact id="contact" />
+
                 <Footer />
               </div>
             }
           />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/error404" element={<Error404 />} />
         </Routes>
       </Router>
     </ThemeProvider>
