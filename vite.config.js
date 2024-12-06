@@ -6,4 +6,11 @@ import process from "process";
 export default defineConfig({
   base: process.env.NODE_ENV === "production" ? "/portfolio/" : "/",
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 });
