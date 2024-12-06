@@ -121,7 +121,7 @@ const Footer = () => {
               <FaGithub />
             </a>
           </div>
-          <Link to="/privacy">
+          <Link to="/portfolio/privacy">
             <div className="flex space-x-4">
               <p
                 className={`${

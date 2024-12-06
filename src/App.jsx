@@ -15,7 +15,7 @@ import Error404 from "./pages/Error404";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/portfolio/",
     element: (
       <>
         <Navbar />
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        index: true, 
+        index: true,
         element: (
           <>
             <Hero id="home" />
@@ -37,11 +37,11 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "privacy",
+        path: "/portfolio/privacy",
         element: <Privacy />,
       },
       {
-        path: "login",
+        path: "/portfolio/login",
         element: <Login />,
       },
       {
