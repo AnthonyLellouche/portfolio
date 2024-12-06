@@ -1,8 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect } from "react";
 
-import Navbar from "../components/Navbar";
-
 const Privacy = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -10,7 +8,6 @@ const Privacy = () => {
 
   return (
     <>
-      <Navbar />
       <div className="bg-gray-100 text-gray-800 py-10 px-6">
         <div className="container mx-auto max-w-4xl">
           <h1 className="text-4xl font-bold text-center mb-8">

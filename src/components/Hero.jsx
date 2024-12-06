@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "../params/ThemeContext";
 
@@ -33,20 +32,20 @@ const Hero = () => {
         {t("hero.specialistInModernSites")}
       </p>
       <div className="flex flex-row mt-4 p-4 rounded-lg items-center justify-center gap-6">
-        <Link
-          to="/#service"
+        <a
+          href="/#service"
           aria-label={t("hero.viewServices")}
           className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white md:inline transform transition-transform duration-200 hover:scale-x-105 px-4 py-2 rounded-full"
         >
           {t("hero.myServices")}
-        </Link>
-        <Link
-          to="/#project"
+        </a>
+        <a
+          href="/#project"
           aria-label={t("hero.viewProjects")}
           className="bg-gradient-to-r from-green-400 to-blue-500 text-white md:inline transform transition-transform duration-200 hover:scale-x-105 px-4 py-2 rounded-full"
         >
           {t("hero.myProjects")}
-        </Link>
+        </a>
       </div>
     </div>
   );

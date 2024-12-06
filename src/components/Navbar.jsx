@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { LuSun } from "react-icons/lu";
@@ -46,9 +44,9 @@ const Navbar = () => {
             alt="logo entreprise actuel"
             className="w-16"
           />
-          <Link to="/#home" className="hover:text-gray-400">
+          <a href="#home" className="hover:text-gray-400">
             <div className="text-3xl font-bold">Tony</div>
-          </Link>
+          </a>
           <Menu as="div" className="relative inline-block text-left">
             <div>
               <Menu.Button className="inline-flex items-center justify-center gap-x-1.5 rounded-md bg-white px-2 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
@@ -64,10 +62,7 @@ const Navbar = () => {
                 />
               </Menu.Button>
             </div>
-            <Menu.Items
-              transition
-              className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-            >
+            <Menu.Items className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="py-1">
                 <Menu.Item>
                   {({ active }) => (
@@ -109,18 +104,18 @@ const Navbar = () => {
           </button>
         </div>
         <div className="space-x-3 hidden md:flex px-2 font-semibold">
-          <Link to="/#about" className="hover:text-gray-400">
+          <a href="#about" className="hover:text-gray-400">
             {t("navbar.aboutMe")}
-          </Link>
-          <Link to="/#service" className="hover:text-gray-400">
+          </a>
+          <a href="#service" className="hover:text-gray-400">
             {t("navbar.myServices")}
-          </Link>
-          <Link to="/#project" className="hover:text-gray-400">
+          </a>
+          <a href="#project" className="hover:text-gray-400">
             {t("navbar.myProjects")}
-          </Link>
-          <Link to="/#contact" className="hover:text-gray-400">
+          </a>
+          <a href="#contact" className="hover:text-gray-400">
             {t("navbar.contact")}
-          </Link>
+          </a>
           <div className="gap-2 flex items-center">
             {darkMode ? (
               <LuSun
@@ -137,13 +132,6 @@ const Navbar = () => {
             )}
           </div>
         </div>
-
-        {/* <Link
-          to="/login"
-          className="bg-gradient-to-r from-green-400 to-blue-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 rounded-full"
-        >
-          {t("navbar.login")}
-        </Link> */}
       </div>
       {menuOpen && (
         <div
@@ -153,28 +141,21 @@ const Navbar = () => {
               : "bg-gray-100 bg-opacity-80 text-black border-gray-200"
           } md:hidden flex flex-col space-y-4 text-center p-4 rounded-xl my-4`}
         >
-          <Link to="/#home" className="hover:text-gray-400">
+          <a href="#home" className="hover:text-gray-400">
             {t("navbar.home")}
-          </Link>
-          <Link to="/#about" className="hover:text-gray-400">
+          </a>
+          <a href="#about" className="hover:text-gray-400">
             {t("navbar.aboutMe")}
-          </Link>
-          <Link to="/#service" className="hover:text-gray-400">
+          </a>
+          <a href="#service" className="hover:text-gray-400">
             {t("navbar.myServices")}
-          </Link>
-          <Link to="/#project" className="hover:text-gray-400">
+          </a>
+          <a href="#project" className="hover:text-gray-400">
             {t("navbar.myProjects")}
-          </Link>
-          <Link to="/#contact" className="hover:text-gray-400">
+          </a>
+          <a href="#contact" className="hover:text-gray-400">
             {t("navbar.contact")}
-          </Link>
-          {/* <Link
-            aria-label={t("navbar.goToLogin")}
-            to="/login"
-            className="bg-gradient-to-r from-green-400 to-blue-500 text-white md:inline transform transition-transform duration-300 hover:scale-x-105 px-4 py-2 rounded-full"
-          >
-            {t("navbar.login")}
-          </Link> */}
+          </a>
         </div>
       )}
     </nav>

@@ -1,11 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
-import { useEffect } from "react";
-
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { ThemeProvider } from "./params/ThemeContext";
 
 import About from "./components/About";
@@ -20,49 +13,49 @@ import Privacy from "./pages/Privacy";
 import Login from "./pages/Login";
 import Error404 from "./pages/Error404";
 
-const ScrollToHashElement = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.hash) {
-      const element = document.querySelector(location.hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [location]);
-
-  return null;
-};
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </>
+    ),
+    children: [
+      {
+        index: true, 
+        element: (
+          <>
+            <Hero id="home" />
+            <About id="about" />
+            <Service id="service" />
+            <Projects id="project" />
+            <Contact id="contact" />
+          </>
+        ),
+      },
+      {
+        path: "privacy",
+        element: <Privacy />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "*",
+        element: <Error404 />,
+      },
+    ],
+  },
+]);
 
 const App = () => {
-  const basename = import.meta.env.MODE === "production" ? "/portfolio" : "";
   return (
     <ThemeProvider>
-      {" "}
-      <Router basename={basename}>
-        <ScrollToHashElement />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div>
-                <Navbar />
-                <Hero id="home" />
-                <About id="about" />
-                <Service id="service" />
-                <Projects id="project" />
-                <Contact id="contact" />
-
-                <Footer />
-              </div>
-            }
-          />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
-      </Router>
+      <RouterProvider router={router} />
     </ThemeProvider>
   );
 };
