@@ -22,7 +22,7 @@ const About = () => {
         </h1>
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <img
-            src="./assets/aboutme.webp"
+            src={`${import.meta.env.BASE_URL}assets/aboutme.webp`}
             alt={t("about.costumePhotoAlt")}
             className="w-72 h-96 rounded-md object-cover mb-8 md:mb-0"
           />

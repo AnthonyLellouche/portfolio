@@ -4,9 +4,9 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import { LuSun } from "react-icons/lu";
 import { Menu } from "@headlessui/react";
 import { FaChevronDown } from "react-icons/fa";
-
 import { useTheme } from "../params/ThemeContext";
 import { useTranslation } from "react-i18next";
+import { useNavigate, useLocation } from "react-router-dom";
 import i18n from "../params/i18n";
 
 const Navbar = () => {
@@ -14,6 +14,8 @@ const Navbar = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const { darkMode, toggleDarkMode } = useTheme();
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const browserLang = i18n.language || navigator.language.split("-")[0];
@@ -29,6 +31,23 @@ const Navbar = () => {
     setSelectedLanguage(lng === "fr" ? "FR" : "EN");
   };
 
+  const handleNavigation = (id) => {
+    if (location.pathname !== "/portfolio/") {
+      navigate("/portfolio/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <nav
       className={`${
@@ -40,28 +59,27 @@ const Navbar = () => {
       <div className="container mx-auto py-2 flex justify-between items-center">
         <div className="flex items-center space-x-2 gap-2">
           <img
-            src="./assets/astro.svg"
+            src={`${import.meta.env.BASE_URL}assets/astro.svg`}
             alt="logo entreprise actuel"
             className="w-16"
           />
-          <a href="#home" className="hover:text-gray-400">
-            <div className="text-3xl font-bold">Tony</div>
-          </a>
+          <div
+            onClick={() => handleNavigation("home")}
+            className="cursor-pointer text-3xl font-bold hover:text-gray-400"
+          >
+            Tony
+          </div>
           <Menu as="div" className="relative inline-block text-left">
-            <div>
-              <Menu.Button className="inline-flex items-center justify-center gap-x-1.5 rounded-md bg-white px-2 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-                <span
-                  className={
-                    selectedLanguage === "FR" ? "fi fi-fr" : "fi fi-gb"
-                  }
-                ></span>
-                {selectedLanguage}
-                <FaChevronDown
-                  aria-hidden="true"
-                  className="-mr-1 h-5 w-5 text-gray-400"
-                />
-              </Menu.Button>
-            </div>
+            <Menu.Button className="inline-flex items-center justify-center gap-x-1.5 rounded-md bg-white px-2 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+              <span
+                className={selectedLanguage === "FR" ? "fi fi-fr" : "fi fi-gb"}
+              ></span>
+              {selectedLanguage}
+              <FaChevronDown
+                aria-hidden="true"
+                className="-mr-1 h-5 w-5 text-gray-400"
+              />
+            </Menu.Button>
             <Menu.Items className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="py-1">
                 <Menu.Item>
@@ -94,29 +112,32 @@ const Navbar = () => {
             </Menu.Items>
           </Menu>
         </div>
-        <div className="md:hidden">
+        <div className="hidden md:flex space-x-4 font-semibold">
           <button
-            onClick={toggleMenu}
-            className="focus:outline-none"
-            aria-label={menuOpen ? t("navbar.closeMenu") : t("navbar.openMenu")}
+            onClick={() => handleNavigation("about")}
+            className="hover:text-gray-400"
           >
-            <RxHamburgerMenu className="text-green-400 size-8" />
-          </button>
-        </div>
-        <div className="space-x-3 hidden md:flex px-2 font-semibold">
-          <a href="#about" className="hover:text-gray-400">
             {t("navbar.aboutMe")}
-          </a>
-          <a href="#service" className="hover:text-gray-400">
+          </button>
+          <button
+            onClick={() => handleNavigation("service")}
+            className="hover:text-gray-400"
+          >
             {t("navbar.myServices")}
-          </a>
-          <a href="#project" className="hover:text-gray-400">
+          </button>
+          <button
+            onClick={() => handleNavigation("project")}
+            className="hover:text-gray-400"
+          >
             {t("navbar.myProjects")}
-          </a>
-          <a href="#contact" className="hover:text-gray-400">
+          </button>
+          <button
+            onClick={() => handleNavigation("contact")}
+            className="hover:text-gray-400"
+          >
             {t("navbar.contact")}
-          </a>
-          <div className="gap-2 flex items-center">
+          </button>
+          <div className="flex items-center gap-2">
             {darkMode ? (
               <LuSun
                 className="cursor-pointer"
@@ -132,30 +153,52 @@ const Navbar = () => {
             )}
           </div>
         </div>
+        <button
+          onClick={toggleMenu}
+          className="md:hidden focus:outline-none"
+          aria-label={menuOpen ? t("navbar.closeMenu") : t("navbar.openMenu")}
+        >
+          <RxHamburgerMenu className="text-green-400 size-8" />
+        </button>
       </div>
       {menuOpen && (
         <div
           className={`${
             darkMode
-              ? "bg-gray-800 bg-opacity-90 text-white border-gray-700"
-              : "bg-gray-100 bg-opacity-80 text-black border-gray-200"
+              ? "bg-gray-800 bg-opacity-90 text-white"
+              : "bg-gray-100 bg-opacity-80 text-black"
           } md:hidden flex flex-col space-y-4 text-center p-4 rounded-xl my-4`}
         >
-          <a href="#home" className="hover:text-gray-400">
+          <button
+            onClick={() => handleNavigation("home")}
+            className="hover:text-gray-400"
+          >
             {t("navbar.home")}
-          </a>
-          <a href="#about" className="hover:text-gray-400">
+          </button>
+          <button
+            onClick={() => handleNavigation("about")}
+            className="hover:text-gray-400"
+          >
             {t("navbar.aboutMe")}
-          </a>
-          <a href="#service" className="hover:text-gray-400">
+          </button>
+          <button
+            onClick={() => handleNavigation("service")}
+            className="hover:text-gray-400"
+          >
             {t("navbar.myServices")}
-          </a>
-          <a href="#project" className="hover:text-gray-400">
+          </button>
+          <button
+            onClick={() => handleNavigation("project")}
+            className="hover:text-gray-400"
+          >
             {t("navbar.myProjects")}
-          </a>
-          <a href="#contact" className="hover:text-gray-400">
+          </button>
+          <button
+            onClick={() => handleNavigation("contact")}
+            className="hover:text-gray-400"
+          >
             {t("navbar.contact")}
-          </a>
+          </button>
         </div>
       )}
     </nav>

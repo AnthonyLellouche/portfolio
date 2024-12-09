@@ -15,7 +15,7 @@ import Error404 from "./pages/Error404";
 
 const router = createBrowserRouter([
   {
-    path: "/portfolio/",
+    path: "/portfolio",
     element: (
       <>
         <Navbar />
@@ -37,11 +37,11 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/portfolio/privacy",
+        path: "privacy",
         element: <Privacy />,
       },
       {
-        path: "/portfolio/login",
+        path: "login",
         element: <Login />,
       },
       {

@@ -13,7 +13,7 @@ const Hero = () => {
       } text-center py-12 px-2`}
     >
       <img
-        src="./assets/dev-profil.webp"
+        src={`${import.meta.env.BASE_URL}assets/dev-profil.webp`}
         alt={t("hero.profilePhotoAlt")}
         className="mx-auto mb-8 w-96 h-96 rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
       />
