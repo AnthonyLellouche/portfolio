@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from "react";
 import { FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -22,9 +23,12 @@ const Contact = () => {
   return (
     <div
       className={`${
-        darkMode ? "bg-black text-white border-t border-gray-700" : "bg-white text-black border-t border-gray-200"
+        darkMode
+          ? "bg-black text-white border-t border-gray-700"
+          : "bg-white text-black border-t border-gray-200"
       } py-8`}
       id="contact"
+           data-testid="contact"
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <h2 className="text-4xl font-bold text-center mb-12">

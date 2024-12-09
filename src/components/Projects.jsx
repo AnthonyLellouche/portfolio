@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import data from "../data/data.json";
 import { useTheme } from "../params/ThemeContext";
+import React from "react";
 
 const Projects = () => {
   const { t, i18n } = useTranslation();
@@ -15,6 +16,7 @@ const Projects = () => {
         darkMode ? "bg-black text-white border-t border-gray-700" : "bg-white text-black border-t border-gray-200"
       } pt-12 pb-20`}
       id="project"
+      data-testid="project" 
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <h2 className="text-4xl font-bold text-center mb-12">

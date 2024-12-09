@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import data from "../data/data.json";
 import { Link } from "react-router-dom";
 import { useTheme } from "../params/ThemeContext";
+import React from "react";
 
 const Service = () => {
   const { i18n } = useTranslation();
@@ -12,9 +13,12 @@ const Service = () => {
   return (
     <div
       className={`${
-        darkMode ? "bg-black text-white border-t border-gray-700" : "bg-white text-black border-t border-gray-200"
+        darkMode
+          ? "bg-black text-white border-t border-gray-700"
+          : "bg-white text-black border-t border-gray-200"
       } pt-12 pb-20`}
       id="service"
+      data-testid="service"
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <h2 className="text-4xl font-bold text-center mb-12">
