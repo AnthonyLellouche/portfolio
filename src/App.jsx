@@ -40,10 +40,10 @@ const router = createBrowserRouter([
         path: "privacy",
         element: <Privacy />,
       },
-      {
-        path: "login",
-        element: <Login />,
-      },
+      // {
+      //   path: "login",
+      //   element: <Login />,
+      // },
       {
         path: "*",
         element: <Error404 />,
