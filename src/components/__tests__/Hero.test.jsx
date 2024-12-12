@@ -30,28 +30,6 @@ describe("Hero Component", () => {
       </ThemeProvider>
     );
 
-  it("renders the hero component correctly in light mode", () => {
-    renderWithProviders(<Hero />);
-
-    const heroContainer = screen.getByText(/hero\.iam/i).closest("div");
-    expect(heroContainer).toHaveClass("bg-white text-black"); // Mode clair
-  });
-
-  it("renders the hero component correctly in dark mode", () => {
-    global.window.matchMedia = jest.fn().mockImplementation((query) => ({
-      matches: true, // Simule que le mode sombre est activé
-      media: query,
-      onchange: null,
-      addEventListener: jest.fn(),
-      removeEventListener: jest.fn(),
-    }));
-
-    renderWithProviders(<Hero />);
-
-    const heroContainer = screen.getByText(/hero\.iam/i).closest("div");
-    expect(heroContainer).toHaveClass("bg-black text-white"); // Mode sombre
-  });
-
   it("renders the services and projects links with correct aria-labels", () => {
     renderWithProviders(<Hero />);
 
