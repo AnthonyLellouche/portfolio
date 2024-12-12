@@ -26,16 +26,16 @@ const Hero = () => {
         <img
           src={`${import.meta.env.BASE_URL}assets/dev-profil.webp`}
           alt={t("hero.profilePhotoAlt")}
-          className="mx-auto mb-8 w-96 h-96 rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
+          className="mx-auto mb-8 w-60 h-60 sm:w-64 sm:h-64 md:w-80 md:h-80  rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
         />
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-3xl sm:text-4xl font-bold">
           {t("hero.iam")}{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
             Anthony Lellouche
           </span>
           , {t("hero.jobTitle")}
         </h1>
-        <p className="mt-4 text-lgtext-gray-300">
+        <p className="mt-4 text-lg text-gray-300">
           {t("hero.specialistInModernSites")}
         </p>
         <div className="flex flex-row mt-4 p-4 rounded-lg items-center justify-center gap-6">
