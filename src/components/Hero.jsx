@@ -19,7 +19,7 @@ const Hero = () => {
         playsInline
       ></video>
       <div
-        className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 z-1"
+        className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-10 z-1"
         aria-hidden="true"
       ></div>
       <div className="relative z-10 px-4">
