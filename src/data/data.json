@@ -67,6 +67,14 @@
         "github": "https://github.com/AnthonyLellouche/print-it",
         "site": "https://anthonylellouche.github.io/print-it/",
         "description": "Création d'une page web pour une société d'imprimerie."
+      },
+      {
+        "id": 9,
+        "name": "Boutons de réseaux sociaux",
+        "technologies": "HTML & CSS",
+        "image": "socialnetwork.webp",
+        "github": "https://github.com/AnthonyLellouche/social-network",
+        "description": "Création de boutons de réseaux sociaux."
       }
     ],
     "services": [
@@ -179,6 +187,14 @@
         "image": "printit.webp",
         "github": "https://github.com/AnthonyLellouche/print-it",
         "site": "https://anthonylellouche.github.io/print-it/",
+        "description": "Creation of a web page for a printing company."
+      },
+      {
+        "id": 9,
+        "name": "Social Network",
+        "technologies": "HTML & CSS",
+        "image": "socialnetwork.webp",
+        "github": "https://github.com/AnthonyLellouche/social-network",
         "description": "Creation of a web page for a printing company."
       }
     ],
