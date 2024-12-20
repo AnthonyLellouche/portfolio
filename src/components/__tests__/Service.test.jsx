@@ -99,7 +99,7 @@ describe("Service Component", () => {
 
     const links = screen.getAllByRole("link");
     links.forEach((link) => {
-      expect(link).toHaveAttribute("href", "/#contact");
+      expect(link).toHaveAttribute("href", "#contact");
     });
   });
 });
