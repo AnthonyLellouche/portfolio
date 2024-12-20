@@ -75,6 +75,14 @@
         "image": "socialnetwork.webp",
         "github": "https://github.com/AnthonyLellouche/social-network",
         "description": "Création de boutons de réseaux sociaux."
+      },
+      {
+        "id": 10,
+        "name": "Carte de profile",
+        "technologies": "HTML & CSS",
+        "image": "card-profile.webp",
+        "github": "https://github.com/AnthonyLellouche/profile-card",
+        "description": "Carte de profile d'un utilisateur en responsive."
       }
     ],
     "services": [
@@ -196,6 +204,14 @@
         "image": "socialnetwork.webp",
         "github": "https://github.com/AnthonyLellouche/social-network",
         "description": "Creation of a web page for a printing company."
+      },
+      {
+        "id": 10,
+        "name": "Profile Card",
+        "technologies": "HTML & CSS",
+        "image": "card-profile.webp",
+        "github": "https://github.com/AnthonyLellouche/profile-card",
+        "description": "Responsive user profile card."
       }
     ],
     "services": [
