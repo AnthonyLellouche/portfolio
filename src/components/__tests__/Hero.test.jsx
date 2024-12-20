@@ -43,7 +43,7 @@ describe("Hero Component", () => {
     const servicesLink = screen.getByText(/hero\.myServices/i);
     const projectsLink = screen.getByText(/hero\.myProjects/i);
 
-    expect(servicesLink).toHaveAttribute("href", "/#service");
-    expect(projectsLink).toHaveAttribute("href", "/#project");
+    expect(servicesLink).toHaveAttribute("href", "#service");
+    expect(projectsLink).toHaveAttribute("href", "#project");
   });
 });
