@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import data from "../data/data.json";
-import { Link } from "react-router-dom";
 import { useTheme } from "../params/ThemeContext";
 import React from "react";
 
@@ -45,13 +44,13 @@ const Service = () => {
               >
                 {service.description}
               </p>
-              <Link
-                to="/#contact"
+              <a
+                href="#contact"
                 aria-label={`Me contacter pour ${service.title}`}
                 className="mt-4 inline-block text-green-400 hover:text-blue-500"
               >
                 <p>{i18n.language === "fr" ? "Me contacter" : "Contact me"}</p>
-              </Link>
+              </a>
             </div>
           ))}
         </div>
