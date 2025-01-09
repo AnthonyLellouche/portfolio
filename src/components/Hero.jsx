@@ -8,7 +8,7 @@ const Hero = () => {
 
   return (
     <div
-      className={`relative text-white text-center h-[78vh] flex flex-col items-center justify-center`}
+      className={`relative text-white text-center h-[78vh] min-h-[600px] flex flex-col items-center justify-center`}
     >
       <video
         className="absolute top-0 left-0 w-full h-[78vh] object-cover z-0"
