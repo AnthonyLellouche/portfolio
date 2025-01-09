@@ -8,10 +8,10 @@ const Hero = () => {
 
   return (
     <div
-      className={`relative text-white text-center h-[78vh] min-h-[600px] flex flex-col items-center justify-center`}
+      className={`relative text-white text-center h-[80vh] min-h-[600px] flex flex-col items-center justify-center`}
     >
       <video
-        className="absolute top-0 left-0 w-full h-[78vh] object-cover z-0"
+        className="absolute top-0 left-0 w-full h-[100%] object-cover z-0"
         src={`${import.meta.env.BASE_URL}assets/animate-bg.mp4`}
         autoPlay
         loop
