@@ -12,6 +12,7 @@ import Service from "./components/Service";
 import Privacy from "./pages/Privacy";
 import Login from "./pages/Login";
 import Error404 from "./pages/Error404";
+import BackToTop from "./params/BackToTop";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
+        <BackToTop />
         <Outlet />
         <Footer />
       </>
