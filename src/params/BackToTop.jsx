@@ -29,7 +29,7 @@ const BackToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 hidden md:block bg-gradient-to-r from-blue-500 to-green-400 text-white p-2 rounded-full shadow-lg transition-transform transform hover:scale-150"
+          className="fixed bottom-5 right-5 hidden md:block bg-gradient-to-r from-blue-500 to-green-400 text-white p-2 rounded-full shadow-lg transition-transform transform hover:scale-150"
         >
           <FaArrowUp size={24} />
         </button>
