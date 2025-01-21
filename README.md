@@ -37,4 +37,5 @@ Pour initialiser le projet.
     * Commintlint
     * Babel
     * Jest
+    * i18n
 
