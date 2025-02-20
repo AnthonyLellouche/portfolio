@@ -83,6 +83,12 @@
         "image": "card-profile.webp",
         "github": "https://github.com/AnthonyLellouche/profile-card",
         "description": "Carte de profile d'un utilisateur en responsive."
+      },
+      {
+        "id": 11,
+        "name": "En cours de création",
+        "image": "wip.webp",
+        "description": "Site en cours de construction."
       }
     ],
     "services": [
@@ -212,6 +218,13 @@
         "image": "card-profile.webp",
         "github": "https://github.com/AnthonyLellouche/profile-card",
         "description": "Responsive user profile card."
+      },
+      {
+        "id": 11,
+        "name": "Work in progress",
+        "technologies": "React",
+        "image": "wip.webp",
+        "description": "Website in progress."
       }
     ],
     "services": [

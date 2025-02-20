@@ -13,10 +13,12 @@ const Projects = () => {
   return (
     <div
       className={`${
-        darkMode ? "bg-black text-white border-t border-gray-700" : "bg-white text-black border-t border-gray-200"
+        darkMode
+          ? "bg-black text-white border-t border-gray-700"
+          : "bg-white text-black border-t border-gray-200"
       } pt-12 pb-20`}
       id="project"
-      data-testid="project" 
+      data-testid="project"
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <h2 className="text-4xl font-bold text-center mb-12">
@@ -51,15 +53,17 @@ const Projects = () => {
               >
                 {project.description}
               </p>
-              <a
-                href={project.github}
-                className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Voir le projet ${project.name} sur GitHub`}
-              >
-                GitHub
-              </a>
+              {project.github && (
+                <a
+                  href={project.github}
+                  className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Voir le projet ${project.name} sur GitHub`}
+                >
+                  GitHub
+                </a>
+              )}
               {project.site && (
                 <a
                   href={project.site}
