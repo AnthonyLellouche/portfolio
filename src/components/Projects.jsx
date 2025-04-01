@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import data from "../data/data.json";
 import { useTheme } from "../params/ThemeContext";
-import React from "react";
+import React, { useState } from "react";
 
 const Projects = () => {
   const { t, i18n } = useTranslation();
@@ -9,6 +9,10 @@ const Projects = () => {
 
   const language = i18n.language === "fr" ? "fr" : "en";
   const projects = data[language].projects;
+  const [sortDescending, setSortDescending] = useState(true);
+  const sortedProjects = [...projects].sort((a, b) =>
+    sortDescending ? b.id - a.id : a.id - b.id
+  );
 
   return (
     <div
@@ -24,8 +28,26 @@ const Projects = () => {
         <h2 className="text-4xl font-bold text-center mb-12">
           {t("hero.myProjects")}
         </h2>
+        <div className="flex justify-center mb-8">
+          <button
+            onClick={() => setSortDescending(!sortDescending)}
+            className={`${
+              darkMode
+                ? "bg-gray-700 hover:bg-gray-600 text-white"
+                : "bg-gray-200 hover:bg-gray-300 text-black"
+            } px-4 py-2 rounded-full transition duration-300`}
+          >
+            {i18n.language === "fr"
+              ? sortDescending
+                ? "Trier du plus recents au plus ancien"
+                : "Trier du plus ancien au plus recent"
+              : sortDescending
+              ? "Sort from newest to old"
+              : "Sort from oldest to new"}
+          </button>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {sortedProjects.map((project) => (
             <div
               key={project.id}
               className={`${
