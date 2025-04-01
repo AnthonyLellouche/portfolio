@@ -86,6 +86,13 @@
       },
       {
         "id": 11,
+        "name": "StoryBook",
+        "technologies": "React",
+        "image": "storybook.webp",
+        "description": "Création de composants personnalisées pour une entreprise médical."
+      },
+      {
+        "id": 12,
         "name": "En cours de création",
         "image": "wip.webp",
         "description": "Site en cours de construction."
@@ -131,6 +138,11 @@
         "id": 8,
         "title": "Maintenance et support",
         "description": "Assure la maintenance et la mise à jour continue de vos applications web pour garantir leur bon fonctionnement."
+      },
+      {
+        "id": 9,
+        "title": "Création de tokens et de composants",
+        "description": "Création et maintien d'un design tokens, création de composants personnalisées sur StoryBook."
       }
     ]
   },
@@ -221,6 +233,13 @@
       },
       {
         "id": 11,
+        "name": "StoryBook",
+        "technologies": "React",
+        "image": "storybook.webp",
+        "description": "Creating a custom component for medical enterprise."
+      },
+      {
+        "id": 12,
         "name": "Work in progress",
         "technologies": "React",
         "image": "wip.webp",
@@ -267,6 +286,11 @@
         "id": 8,
         "title": "Maintenance and support",
         "description": "Ensures the maintenance and continuous updating of your web applications to ensure their proper functioning."
+      },
+      {
+        "id": 9,
+        "title": "Creation of tokens and components",
+        "description": "Creation and maintenance of design tokens, creation of custom components - StoryBook."
       }
     ]
   }
