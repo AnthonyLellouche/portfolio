@@ -116,11 +116,11 @@ describe("Projects Component", () => {
     const githubLinks = screen.getAllByRole("link", { name: /GitHub/i });
     expect(githubLinks[0]).toHaveAttribute(
       "href",
-      "https://github.com/projet1"
+      "https://github.com/projet2"
     );
     expect(githubLinks[1]).toHaveAttribute(
       "href",
-      "https://github.com/projet2"
+      "https://github.com/projet1"
     );
   });
 
@@ -140,7 +140,7 @@ describe("Projects Component", () => {
     renderWithProviders(<Projects />);
 
     const images = screen.getAllByRole("img");
-    expect(images[0]).toHaveAttribute("alt", "Projet 1");
-    expect(images[1]).toHaveAttribute("alt", "Projet 2");
+    expect(images[0]).toHaveAttribute("alt", "Projet 2");
+    expect(images[1]).toHaveAttribute("alt", "Projet 1");
   });
 });
