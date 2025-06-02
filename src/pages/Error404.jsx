@@ -7,6 +7,9 @@ const Error404 = () => {
       <h1 className="flex justify-center items-center text-xl">
         404 NOT FOUND MOTHERFUCK CECI EST UN TEST'
       </h1>
+      <h1>
+          ceci est un autre test
+      </h1>
       <div />
     </div>
   );
