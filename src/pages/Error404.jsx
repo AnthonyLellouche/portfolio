@@ -5,7 +5,7 @@ const Error404 = () => {
     <div className="m-0 min-h-screen grid grid-rows-[auto_1fr_auto]">
       <div />
       <h1 className="flex justify-center items-center text-xl">
-        404 NOT FOUND MOTHERFUCK'
+        404 NOT FOUND MOTHERFUCK CECI EST UN TEST'
       </h1>
       <div />
     </div>
