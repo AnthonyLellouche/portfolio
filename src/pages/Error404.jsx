@@ -10,6 +10,9 @@ const Error404 = () => {
       <h1>
           ceci est un autre test
       </h1>
+            <h1>
+                ceci est un autre test n3
+            </h1>
       <div />
     </div>
   );
