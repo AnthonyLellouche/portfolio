@@ -93,6 +93,13 @@
       },
       {
         "id": 12,
+        "name": "Design Tokens",
+        "technologies": "Design Tokens pour Figma",
+        "image": "d-t.webp",
+        "description": "Création de design tokens pour les composants."
+      },
+      {
+        "id": 13,
         "name": "En cours de création",
         "image": "wip.webp",
         "description": "Site en cours de construction."
@@ -240,6 +247,13 @@
       },
       {
         "id": 12,
+        "name": "Design Tokens",
+        "technologies": "Design Tokens for Figma",
+        "image": "d-t.webp",
+        "description": "Creation of design tokens for components."
+      },
+      {
+        "id": 13,
         "name": "Work in progress",
         "technologies": "React",
         "image": "wip.webp",
