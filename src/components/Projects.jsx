@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import data from "../data/data.json";
 import { useTheme } from "../params/ThemeContext";
+import { FaSortAmountDownAlt, FaSortAmountUpAlt } from "react-icons/fa";
 import React, { useState } from "react";
 
 const Projects = () => {
@@ -25,25 +26,32 @@ const Projects = () => {
       data-testid="project"
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-4xl font-bold text-center mb-6">
           {t("hero.myProjects")}
         </h2>
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-end mb-5">
           <button
             onClick={() => setSortDescending(!sortDescending)}
             className={`${
               darkMode
                 ? "bg-gray-700 hover:bg-gray-600 text-white"
                 : "bg-gray-200 hover:bg-gray-300 text-black"
-            } px-4 py-2 rounded-full transition duration-300`}
+            } px-4 py-2 rounded-full transition duration-300 flex items-center`}
+            aria-label={
+              i18n.language === "fr"
+                ? sortDescending
+                  ? "Trier du plus récent au plus ancien"
+                  : "Trier du plus ancien au plus récent"
+                : sortDescending
+                ? "Sort from newest to old"
+                : "Sort from oldest to new"
+            }
           >
-            {i18n.language === "fr"
-              ? sortDescending
-                ? "Trier du plus recents au plus ancien"
-                : "Trier du plus ancien au plus recent"
-              : sortDescending
-              ? "Sort from newest to old"
-              : "Sort from oldest to new"}
+            {sortDescending ? (
+              <FaSortAmountDownAlt size={20} />
+            ) : (
+              <FaSortAmountUpAlt size={20} />
+            )}
           </button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
